@@ -1,5 +1,7 @@
-<template lang="pug">
-  .content
+<template>
+  <div>
+    <img src="https://placehold.jp/150x150.png">
+  </div>
 
 </template>
 
