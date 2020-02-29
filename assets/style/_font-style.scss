@@ -1,0 +1,160 @@
+html, :root {
+  color: $color-text;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "palt";
+  -webkit-font-feature-settings: "palt";
+
+  font-family: 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+
+  font-size: 14px; //=1rem
+  line-height: 1.8;
+  //letter-spacing: 0.06em;
+}
+
+em {
+  //color: $color-orange;
+}
+
+@include mediaquery-sm() {
+}
+
+h1, h2, h3, h4, h5, h6 {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+h4 {
+}
+
+h5, h6 {
+}
+
+@include mediaquery-not-sm {
+  h1 {
+    font-size: 34px;
+    line-height: 1.3;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  h5 {
+  }
+  h6 {
+  }
+  .fs--l, .fs--l p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+  .fs--m, p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .fs--s, .fs--s p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+  .fs--ss, .fs--ss p, .caption, .caption p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (min-width: 600px) and(max-width: $screen-md - 1) {
+  h1 {
+    font-size: 41px;
+    line-height: 1.3;
+  }
+  h2 {
+    font-size: 35px;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+  h4 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  h5 {
+  }
+  h6 {
+  }
+  .fs--l, .fs--l p {
+    font-size: 24px;
+    line-height: 1.9;
+  }
+  .fs--m, p {
+    font-size: 22px;
+    line-height: 1.8;
+  }
+  .fs--s, .fs--s p {
+    font-size: 21px;
+    line-height: 1.6;
+  }
+  .fs--ss, .fs--ss p, .caption, .caption p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+  h2 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  h5 {
+  }
+  h6 {
+  }
+  .fs--l, .fs--l p {
+    font-size: 15px;
+    line-height: 1.9;
+  }
+  .fs--m, p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .fs--s, .fs--s p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .fs--ss, .fs--ss p, .caption, .caption p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+}
+
+b, strong {
+}
