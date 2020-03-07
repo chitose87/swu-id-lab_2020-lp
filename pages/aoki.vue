@@ -88,47 +88,37 @@ export default class TopPageComp extends Vue {}
 <style lang="scss">
 .list-link {
   display: flex;
-  // height: 10rem;
-  justify-content: center;
-  text-align: center;
-  text-justify: center;
   background-size: cover;
   .body {
     display: flex;
     flex-basis: 15rem;
     height: 10rem;
     margin: 1rem 1rem;
-    background-color: blue;
 
     .inner {
-      // display: flex;
-      // flex-basis: 15rem;
       width: 100%;
-      height: 10rem;
-      // height: 100%;
-      font-size: 1.3rem;
+      p {
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        flex-direction: column;
+        height: 100%;
+        margin-bottom: 0;
+        a {
+          font-size: 1.3rem;
+          line-height: 2rem;
+        }
+      }
     }
 
     .linkp1 {
-      display: flex;
       background-image: url("https://placehold.jp/150x150.png");
-      line-height: 2rem;
-      // height: 100%;
-      margin-bottom: 0;
-      // font-size: 1.5rem;
-      justify-content: space-around;
-      // vertical-align: middle;
-      flex-direction: column;
     }
     .linkp2 {
       background-image: url("https://placehold.jp/150x150.png");
-      line-height: 2rem;
-      // font-size: 1rem;
     }
     .linkp3 {
       background-image: url("https://placehold.jp/150x150.png");
-      line-height: 2rem;
-      // font-size: 1rem;
     }
   }
 }
