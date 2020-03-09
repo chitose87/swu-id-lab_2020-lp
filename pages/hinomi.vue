@@ -59,18 +59,22 @@
     </div>
 
     <div class="container">
-      <div class="img2">
-        <img src="https://placehold.jp/150x150.png" />
-        <img src="https://placehold.jp/150x150.png" />
+      <div class="container3">
+        <div class="hudder">
+          <div class="img2">
+            <img src="https://placehold.jp/150x150.png" />
+            <img src="https://placehold.jp/150x150.png" />
+          </div>
+          <div class="info2">
+            <a href="#">お知らせ</a>
+            <a href="#">企業情報</a>
+            <a href="#">事業内容</a>
+            <a href="#">採用情報</a>
+            <a href="#">お問い合わせ</a>
+          </div>
+        </div>
+        <small class="small">©︎2019 ヤバイホームページ屋さん</small>
       </div>
-      <div class="info2">
-        <a href="#">お知らせ</a>
-        <a href="#">企業情報</a>
-        <a href="#">事業内容</a>
-        <a href="#">採用情報</a>
-        <a href="#">お問い合わせ</a>
-      </div>
-      <small>©︎2019 ヤバイホームページ屋さん</small>
     </div>
   </div>
 </template>
@@ -104,8 +108,9 @@ h1 {
 }
 
 .hoge {
+  padding-left: 590px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 .hedderlink {
   color: blue;
@@ -138,17 +143,24 @@ h1 {
 }
 
 .info {
-  color: blue;
   text-decoration: none;
   font-size: 1.1em;
   padding-top: 30px;
   padding-left: 30px;
   line-height: 3;
   letter-spacing: 0.1em;
+  a {
+    color: blue;
+    text-decoration: none;
+  }
 }
 
 .information {
   text-align: right;
+  a {
+    color: blue;
+    text-decoration: none;
+  }
 }
 
 .container2 {
@@ -181,13 +193,43 @@ h1 {
   height: 150px;
 }
 
+.container3 {
+  border-top: 1px solid gray;
+}
+
+.hudder {
+  display: flex;
+}
+
 .img2 {
-  width: 0.05px;
-  height: 0.05px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .info2 {
-  display: flex;
-  justify-content: flex-end;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 590px;
+  justify-content: space-between;
+  a {
+    color: blue;
+    text-decoration: none;
+  }
+}
+
+.small {
+  color: gray;
+  padding-top: 10px;
+  padding-left: 400px;
+  padding-right: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
