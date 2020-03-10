@@ -66,11 +66,11 @@
             <img src="https://placehold.jp/150x150.png" />
           </div>
           <div class="info2">
-            <a href="#">お知らせ</a>
-            <a href="#">企業情報</a>
-            <a href="#">事業内容</a>
-            <a href="#">採用情報</a>
-            <a href="#">お問い合わせ</a>
+            <a href="#" class="hedderlink">お知らせ</a>
+            <a href="#" class="hedderlink">企業情報</a>
+            <a href="#" class="hedderlink">事業内容</a>
+            <a href="#" class="hedderlink">採用情報</a>
+            <a href="#" class="hedderlink">お問い合わせ</a>
           </div>
         </div>
         <small class="small">©︎2019 ヤバイホームページ屋さん</small>
@@ -108,7 +108,7 @@ h1 {
 }
 
 .hoge {
-  padding-left: 590px;
+  padding-left: 610px;
   display: flex;
   justify-content: space-between;
 }
@@ -205,9 +205,11 @@ h1 {
   display: flex;
   width: 50px;
   height: 50px;
+  padding-right: 10px;
   img {
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-right: 10px;
     width: 100%;
     height: 100%;
   }
@@ -216,12 +218,14 @@ h1 {
 .info2 {
   padding-top: 20px;
   padding-bottom: 20px;
-  padding-left: 590px;
+  padding-left: 690px;
+  display: flex;
   justify-content: space-between;
-  a {
-    color: blue;
-    text-decoration: none;
-  }
+}
+
+.hedderlink {
+  color: blue;
+  text-decoration: none;
 }
 
 .small {
