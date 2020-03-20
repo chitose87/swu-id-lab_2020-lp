@@ -3,42 +3,46 @@
     <div>
       <h1>ヤバイホームページ屋さん</h1>
     </div>
-    <div class="main-visual">
+    <div class="min-vaisual">
       <img src="https://placehold.jp/150x150.png" />
     </div>
-    <div>
+    <div class="info-body">
       <h2>お知らせ</h2>
 
-      <ul class="list-info">
-        <li>
-          <div class="body">
-            <p>
-              <a href="#" class="news">2019/04/01 プレスリリース 新サービス発表会について</a>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="body">
-            <p>
-              <a href="#" class="news">2019/04/01 メディア掲載 〇〇新聞に掲載されました</a>
-            </p>
-          </div>
-        </li>
-        <li>
-          <div class="body">
-            <p>
-              <a href="#" class="news">2019/04/01 採用情報 2020年度新卒採用を開始いたします</a>
-            </p>
-          </div>
-        </li>
-      </ul>
+      <div class="list-info-body">
+        <ul class="list-info">
+          <li>
+            <div class="body">
+              <p>
+                <a href="#" class="news">2019/04/01 プレスリリース 新サービス発表会について</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="body">
+              <p>
+                <a href="#" class="news">2019/04/01 メディア掲載 〇〇新聞に掲載されました</a>
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="body">
+              <p>
+                <a href="#" class="news">2019/04/01 採用情報 2020年度新卒採用を開始いたします</a>
+              </p>
+            </div>
+          </li>
+        </ul>
 
-      <p>
-        <a href="#" class="info-more">もっと見る</a>
-      </p>
+        <div class="info-more-body">
+          <p>
+            <a href="#" class="info-more">もっと見る</a>
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div>
+    <div class="link-body">
       <ul class="list-link">
         <li class="body">
           <div class="inner">
@@ -86,42 +90,86 @@ export default class TopPageComp extends Vue {}
 </script>
 
 <style lang="scss">
-.list-link {
-  display: flex;
-  background-size: cover;
-  .body {
-    display: flex;
-    flex-basis: 15rem;
-    height: 10rem;
-    margin: 1rem 1rem;
+.min-vaisual {
+  img {
+    width: 100vw;
+    height: 20vh;
+  }
+}
 
-    .inner {
-      width: 100%;
-      p {
-        display: flex;
-        text-align: center;
-        justify-content: space-around;
-        flex-direction: column;
-        height: 100%;
-        margin-bottom: 0;
-        a {
-          font-size: 1.3rem;
-          line-height: 2rem;
-        }
+.info-body {
+  border: solid 1px gray;
+  margin: 3vw 5vh;
+
+  h2 {
+    text-align: center;
+    margin: 3rem;
+  }
+
+  .list-info-body {
+    margin: 3rem;
+    p {
+      a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: blue;
       }
     }
-
-    .linkp1 {
-      background-image: url("https://placehold.jp/150x150.png");
-    }
-    .linkp2 {
-      background-image: url("https://placehold.jp/150x150.png");
-    }
-    .linkp3 {
-      background-image: url("https://placehold.jp/150x150.png");
+    .info-more-body {
+      p {
+        text-align: right;
+      }
     }
   }
 }
+
+.link-body {
+  display: flex;
+  margin: 3vw;
+  .list-link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .body {
+      display: flex;
+      flex-basis: 15rem;
+      height: 10rem;
+      margin: 1rem 1rem;
+
+      .inner {
+        width: 100%;
+        p {
+          display: flex;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          text-align: center;
+          justify-content: space-around;
+          flex-direction: column;
+          height: 100%;
+          margin-bottom: 0;
+          a {
+            line-height: 2rem;
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .linkp1 {
+        background-image: url("https://placehold.jp/150x150.png");
+      }
+      .linkp2 {
+        background-image: url("https://placehold.jp/150x150.png");
+      }
+      .linkp3 {
+        background-image: url("https://placehold.jp/150x150.png");
+      }
+    }
+  }
+}
+
 .content {
   main {
   }
