@@ -1,5 +1,9 @@
 <template lang="pug">
   div
+    LabComp
+    DpComp
+
+    // 以下を移植したりしなかったり。
     header
       .header
         .logo
@@ -216,9 +220,11 @@
 <script lang="ts">
   import {Component} from "~/node_modules/vue-property-decorator";
   import {Vue} from "~/node_modules/nuxt-property-decorator";
+  import LabComp from "~/components/LabComp.vue";
+  import DpComp from "~/components/DpComp.vue";
 
   @Component({
-    components: {}
+    components: {DpComp, LabComp}
   })
   export default class TopPageComp extends Vue {
   }
