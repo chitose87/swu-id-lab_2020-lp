@@ -17,7 +17,7 @@
           | 本業がWebクリエオターを中心に実際の現場と同じよ
           br
           | うな進行とクリエイティビティを目指します。
-        p.discription
+        p
           | 第一線で活躍するプロのデザイナー、
           br
           | エンジニアを交えて「プロクオリティ」を前提としま
@@ -25,18 +25,19 @@
           | す。
 
     section.section
-      img.img(src="/imgs/Team.png" alt="team")
+      .box
+        img.img(src="/imgs/Team.png" alt="team")
       div.group
         p.title Director
         div.content
           p.subtitle 
-           | 主に企画・ミーティング運営、
-           br
-           | スケジュール管理、
-           br
-           | プロジェクト全体の進行・管理
-           br
-           | を行います。
+          | 主に企画・ミーティング運営、
+          br
+          | スケジュール管理、
+          br
+          | プロジェクト全体の進行・管理
+          br
+          | を行います。
           img(src="https://placehold.jp/250x150.png")
       div.group
         p.title Designer
@@ -50,7 +51,7 @@
             | Photoshopなどを用いてデザイ
             br
             | ンを作成します。
-          //img(src="https://placehold.jp/250x150.png")  
+            //img(src="https://placehold.jp/250x150.png")  
       div.group
         p.title Engineer
         div.content
@@ -59,19 +60,19 @@
             br
             | ラミングを行います。
           img(src="https://placehold.jp/250x150.png")
-    
+      
     section.news-section
       .container
         p.discription
-         | このコミュニティは枠にとらわれない自由な場です。
-         br
-         | 学生と変なおじさんでできた、
+        | このコミュニティは枠にとらわれない自由な場です。
+        br
+        | 学生と変なおじさんでできた、
         p
-         | ゆるいけど実際の現場と同じような進行方法で
-         br
-         | 進んでいく集まりです。
-         br
-         | コンセプトはありません。
+        | ゆるいけど実際の現場と同じような進行方法で
+        br
+        | 進んでいく集まりです。
+        br
+        | コンセプトはありません。
       
     aside
       img(src="/imgs/Producer.png" alt="producer")
@@ -83,7 +84,9 @@
           br
           | 環境デザイン学科 非常勤講師
         img(src="https://placehold.jp/20x20.png")
-      .button 参加申し込み  
+      .button 
+        p
+          | 参加申し込み  
 
 </template>
 
@@ -131,27 +134,39 @@ export default class LabComp extends Vue {}
 nav {
   .container {
     margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0rem;
   }
   .discription {
     font-size: 14px;
     padding-bottom: 0.05rem;
     margin-bottom: 0rem;
   }
+  p {
+    margin-bottom: 0rem;
+  }
 }
 
 .section {
-  background-color: #51ff68;
+  margin-top: 5rem;
+  background-color: (#51ff68);
   max-width: 100%;
   height: 790px;
-  .img {
-    width: 160px;
-    height: auto;
-    display: block;
-    margin: auto;
+  .box {
+    background: -moz-linear-gradient(top, #000, transparent);
+    background: -webkit-linear-gradient(top, #000, transparent);
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0)
+    );
+    .img {
+      width: 160px;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
   }
   .group {
-    width: 337px;
     height: 181px;
     margin: 1rem;
     background-color: white;
@@ -199,20 +214,37 @@ aside {
     justify-content: space-between;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
+    text-align: center;
     p {
       line-height: 1.5rem;
       font-size: 14px;
     }
     img {
-      margin: 1rem;
+      margin: 0rem;
       width: 100px;
       height: 65px;
     }
   }
   .button {
+    width: 220px;
+    height: 44px;
+    background-color: #34b3db;
+    border-radius: 10px;
     margin-top: 2.5rem;
     margin-bottom: 5rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 5rem;
+    p {
+      color: white;
+      font-size: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+    }
   }
 }
 </style>
