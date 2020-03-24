@@ -25,6 +25,9 @@
           | す。
 
     section.section
+      .bg
+        .detail
+          img.img(src="/imgs/mone.png" alt="mone")
       .box
         img.img(src="/imgs/Team.png" alt="team")
       div.group
@@ -60,7 +63,7 @@
             br
             | ラミングを行います。
           img(src="https://placehold.jp/250x150.png")
-      
+        
     section.news-section
       .container
         p.discription
@@ -69,21 +72,19 @@
         | 学生と変なおじさんでできた、
         p
         | ゆるいけど実際の現場と同じような進行方法で
-        br
         | 進んでいく集まりです。
         br
         | コンセプトはありません。
       
-    aside
+    aside.container
       img(src="/imgs/Producer.png" alt="producer")
-      div.profile
+      .profile
         p
           | 千歳 慎
           br
           | Interactive Designer
           br
           | 環境デザイン学科 非常勤講師
-        img(src="https://placehold.jp/20x20.png")
       .button 
         p
           | 参加申し込み  
@@ -102,8 +103,6 @@ export default class LabComp extends Vue {}
 
 <style lang="scss">
 .container {
-  margin-right: 1rem;
-  margin-left: 1rem;
 }
 
 .mainvisual {
@@ -148,9 +147,27 @@ nav {
 
 .section {
   margin-top: 5rem;
-  background-color: (#51ff68);
   max-width: 100%;
   height: 790px;
+  .bg {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 0;
+    z-index: -1;
+    .detail {
+      padding: 0px;
+      width: 100vw;
+      height: 100vh;
+      .img {
+        padding: 0px;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
   .box {
     background: -moz-linear-gradient(top, #000, transparent);
     background: -webkit-linear-gradient(top, #000, transparent);
@@ -192,6 +209,7 @@ nav {
 }
 
 .news-section {
+  background-color: white;
   .discription {
     margin-top: 5rem;
     padding-bottom: 1rem;
@@ -199,30 +217,22 @@ nav {
 }
 
 aside {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  background-color: white;
   img {
     display: block;
     margin: auto;
     width: 280px;
     height: auto;
-    margin-top: 5rem;
+    padding-top: 5rem;
     margin-bottom: 2.5rem;
   }
   .profile {
-    display: flex;
-    justify-content: space-between;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
-    text-align: center;
     p {
+      margin: auto;
       line-height: 1.5rem;
       font-size: 14px;
-    }
-    img {
-      margin: 0rem;
-      width: 100px;
-      height: 65px;
     }
   }
   .button {
