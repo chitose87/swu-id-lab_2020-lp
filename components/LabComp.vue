@@ -241,12 +241,10 @@ aside {
     background-color: #34b3db;
     border-radius: 10px;
     margin-top: 2.5rem;
-    margin-bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-bottom: 5rem;
     p {
       color: white;
       font-size: 16px;
