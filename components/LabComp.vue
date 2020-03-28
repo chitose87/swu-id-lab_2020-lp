@@ -26,10 +26,10 @@
       .bg
         .catch
           img.img(src="/imgs/mone.png" alt="mone")
-
+          
       // 見出しなので
       h3.box
-        img.img(src="/imgs/Team.png" alt="team")
+        img.img(src="/imgs/Team.png" alt="Team")
       .group
         p.title Director
         .content
@@ -54,7 +54,6 @@
             | Photoshopなどを用いてデザイ
             br
             | ンを作成します。
-            //img(src="https://placehold.jp/250x150.png")  
       .group
         p.title Engineer
         .content
@@ -71,7 +70,9 @@
           | このコミュニティは枠にとらわれない自由な場です。
           br
           | 学生と変なおじさんでできた、
+        p 
           | ゆるいけど実際の現場と同じような進行方法で
+          br
           | 進んでいく集まりです。
           br
           | コンセプトはありません。
@@ -81,13 +82,12 @@
       //asideは、ページのコンテンツと関係ないようなブロックにつかう
       .container
         img(src="/imgs/Producer.png" alt="Producer")
-        .profile
-          p
-            | 千歳 慎
-            br
-            | Interactive Designer
-            br
-            | 環境デザイン学科 非常勤講師
+        p.profile
+          | 千歳 慎
+          br
+          | Interactive Designer
+          br
+          | 環境デザイン学科 非常勤講師
         p.submit
           a(href="#").button
             | 参加申し込み
@@ -144,11 +144,12 @@ export default class LabComp extends Vue {}
 
   .discription {
     font-size: 14px;
-    padding-bottom: 0.05rem;
+    padding-bottom: 2rem;
     margin-bottom: 0rem;
   }
 
   p {
+    font-size: 14px;
     margin-bottom: 0rem;
   }
 }
@@ -156,7 +157,7 @@ export default class LabComp extends Vue {}
 .section {
   margin-top: 5rem;
   max-width: 100%;
-  height: 790px;
+  padding-bottom: 4rem;
 
   .bg {
     position: -webkit-sticky;
@@ -198,7 +199,7 @@ export default class LabComp extends Vue {}
   }
 
   .group {
-    height: 181px;
+    padding: 1rem;
     margin: 1rem;
     background-color: white;
 
@@ -211,16 +212,16 @@ export default class LabComp extends Vue {}
     .content {
       display: flex;
       justify-content: space-between;
-      margin: 1rem;
 
       img {
         width: 100px;
         height: 100px;
+        margin-top: 1rem;
       }
 
       .subtitle {
-        padding: none;
-        margin-bottom: 0rem;
+        margin-top: 1rem;
+        padding: 0px;
       }
     }
   }
@@ -228,10 +229,14 @@ export default class LabComp extends Vue {}
 
 .news-section {
   background-color: white;
-
+  .container {
+    padding-top: 5rem;
+  }
   .discription {
-    margin-top: 5rem;
-    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+  }
+  p {
+    margin: 0px;
   }
 }
 
@@ -248,9 +253,9 @@ export default class LabComp extends Vue {}
   }
 
   .profile {
+    text-align: center;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
-
     p {
       margin: auto;
       line-height: 1.5rem;
