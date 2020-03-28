@@ -55,7 +55,6 @@
 
       section.dp-insert-section
         .dp-insert-visual
-          //- .dp-insert-visual-body
           img(src="../static/imgs/dp-insert.png")
 
       section.dp-date-section
