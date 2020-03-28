@@ -80,7 +80,7 @@
     section.profile-section
       //asideは、ページのコンテンツと関係ないようなブロックにつかう
       .container
-        img(src="/imgs/Producer.png" alt="producer")
+        img(src="/imgs/Producer.png" alt="Producer")
         .profile
           p
             | 千歳 慎
@@ -88,7 +88,7 @@
             | Interactive Designer
             br
             | 環境デザイン学科 非常勤講師
-        p
+        p.submit
           a(href="#").button
             | 参加申し込み
 
@@ -258,24 +258,29 @@ export default class LabComp extends Vue {}
     }
   }
 
-  .button {
-    width: 220px;
-    height: 44px;
-    background-color: #34b3db;
-    border-radius: 10px;
-    margin-top: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-
-    p {
+  .submit {
+    a {
       color: white;
-      font-size: 16px;
+    }
+    .button {
+      width: 220px;
+      height: 44px;
+      background-color: #34b3db;
+      border-radius: 10px;
+      margin-top: 2.5rem;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: auto;
+      text-decoration: none;
+      p {
+        color: white;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
     }
   }
 }
