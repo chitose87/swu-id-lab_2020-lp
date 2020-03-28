@@ -264,6 +264,7 @@ export default class LabComp extends Vue {}
   }
 
   .submit {
+    padding-bottom: 4rem;
     a {
       color: white;
     }
