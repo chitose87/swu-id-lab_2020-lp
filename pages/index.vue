@@ -3,6 +3,10 @@
     LabComp
     DpComp
 
+    footer
+      small ©昭和女子大学 情報デザイン研究室
+
+
 </template>
 
 <script lang="ts">

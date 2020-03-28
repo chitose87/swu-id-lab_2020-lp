@@ -1,8 +1,12 @@
 <template lang="pug">
   .dp
+    //↓　.containerに置き換えてください
     .dp-inner
+      //↓　bodyは不要かも
       .dp-body
-        .dp-main-section
+
+        section.dp-main-section
+          //↑がsection級　↓はsectionではないです（sectionは入れ子になりません）
           section
             .dp-main-title
               img(src="../static/imgs/DP.png")
@@ -29,6 +33,7 @@
               img(src="https://placehold.jp/150x150.png")
 
         .dp-sub-section
+          //↑がsection級　↓はsectionではないです（sectionは入れ子になりません）
           section
             p.dp-sub-text
               | 自分の好きなことが活かせそう…!」という人と
@@ -38,13 +43,14 @@
               | 例えば、写真を撮るのが好きなら
               br
               | Webサイトの素材撮影に活かせます。
-              br
-              br
+              // 段落はpで、連続brは基本的にNGです
+              //br
+              //br
+            p
               | モデルになりたいなら、素材の被写体に。
               br
               | 文章を書くのが好きなら、ライターに。
-              br
-              br
+            p
               | ただ、自分のやりたいことをプロクオリティまで
               br
               | 持っていくことは簡単ではありません。
@@ -54,8 +60,7 @@
               | 誰かに「やらされている」感覚で参加すると
               br
               | きつい部分も出てきてしまうかもしれません。
-              br
-              br
+            p
               | Labをうまく進めていくために
               br
               | 主体性を持ったマインドで参加してもらえれば、
@@ -63,10 +68,12 @@
               | よりいいコミュニティになると思います。
 
         .dp-insert-visual-body
+          //命名としては逆です、visualがあって、中身のbody
           .dp-insert-visual
             img(src="../static/imgs/dp-insert.png")
 
         .dp-date-section
+          //↑がsection級　↓はsectionではないです（sectionは入れ子になりません）
           section
             p.dp-date-title
               | 日程・期間
@@ -89,9 +96,6 @@
 
           .dp-button
             | 参加申し込み
-
-      .dp-footer
-        | ©昭和女子大学 情報デザイン研究室
 
 </template>
 
