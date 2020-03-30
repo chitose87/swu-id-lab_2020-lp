@@ -55,7 +55,6 @@
 
       section.dp-insert-section
         .dp-insert-visual
-          //- .dp-insert-visual-body
           img(src="../static/imgs/dp-insert.png")
 
       section.dp-date-section
@@ -75,8 +74,9 @@
           br
           | Mail：chitose87@gmail.com
 
-        .dp-button
-          | 参加申し込み
+        p.submit
+          a(href="#").button
+            | 参加申し込み
 
 </template>
 
@@ -103,18 +103,25 @@ export default class DpComp extends Vue {}
         font-size: 24px;
       }
       .dp-main-visual {
-        width: 100%;
-        object-fit: cover;
+        text-align: center;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 10rem;
+        }
       }
     }
     .dp-insert-section {
       margin: 2.5rem 0;
       .dp-insert-visual {
-        width: 100%;
-        margin: 0 -500%;
-        padding: 0 500%;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         img {
+          margin: 0 auto;
           object-fit: cover;
+          width: 100%;
         }
       }
     }
@@ -122,10 +129,31 @@ export default class DpComp extends Vue {}
       .dp-date-title {
         font-size: 24px;
       }
-      .dp-button {
-        margin-top: 2.5rem;
-        padding-bottom: 5rem;
-        text-align: center;
+      .submit {
+        padding-bottom: 4rem;
+        a {
+          color: white;
+        }
+        .button {
+          width: 220px;
+          height: 44px;
+          background-color: #34b3db;
+          border-radius: 10px;
+          margin-top: 2.5rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          text-decoration: none;
+          p {
+            color: white;
+            font-size: 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+          }
+        }
       }
     }
   }
