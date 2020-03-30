@@ -144,7 +144,7 @@ export default class LabComp extends Vue {}
 
   .discription {
     font-size: 14px;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
     margin-bottom: 0rem;
   }
 
@@ -255,7 +255,7 @@ export default class LabComp extends Vue {}
   .profile {
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 4.375rem;
     p {
       margin: auto;
       line-height: 1.5rem;
