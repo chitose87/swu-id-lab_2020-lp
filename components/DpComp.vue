@@ -81,84 +81,98 @@
 </template>
 
 <script lang="ts">
-import { Component } from "~/node_modules/vue-property-decorator";
-import { Vue } from "~/node_modules/nuxt-property-decorator";
+  import {Component} from "~/node_modules/vue-property-decorator";
+  import {Vue} from "~/node_modules/nuxt-property-decorator";
 
-@Component({
-  components: {}
-})
-export default class DpComp extends Vue {}
+  @Component({
+    components: {}
+  })
+  export default class DpComp extends Vue {
+  }
 </script>
 
 <style lang="scss">
-.dp {
-  background-color: #d84d4d;
-  .container {
-    section {
-      margin: 1rem 0;
-    }
-    .dp-main-section {
-      text-align: center;
-      .dp-main-header {
-        font-size: 24px;
+  .dp {
+    background-color: #d84d4d;
+
+    .container {
+      section {
+        margin: 1rem 0;
       }
-      .dp-main-visual {
+
+      .dp-main-section {
         text-align: center;
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: 10rem;
+
+        .dp-main-header {
+          font-size: 24px;
+        }
+
+        .dp-main-visual {
+          text-align: center;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 10rem;
+          }
         }
       }
-    }
-    .dp-insert-section {
-      margin: 2.5rem 0;
-      .dp-insert-visual {
-        width: 100vw;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        img {
-          margin: 0 auto;
-          object-fit: cover;
-          width: 100%;
+
+      .dp-insert-section {
+        margin: 2.5rem 0;
+
+        .dp-insert-visual {
+          width: 100vw;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+
+          img {
+            margin: 0 auto;
+            object-fit: cover;
+            width: 100%;
+          }
         }
       }
-    }
-    .dp-date-section {
-      .dp-date-title {
-        font-size: 24px;
-      }
-      .submit {
-        padding-bottom: 4rem;
-        a {
-          color: white;
+
+      .dp-date-section {
+        .dp-date-title {
+          font-size: 24px;
         }
-        .button {
-          width: 220px;
-          height: 44px;
-          background-color: #34b3db;
-          border-radius: 10px;
-          margin-top: 2.5rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-          text-decoration: none;
-          p {
+
+        .submit {
+          padding-bottom: 4rem;
+
+          a {
             color: white;
-            font-size: 16px;
+          }
+
+          .button {
+            width: 220px;
+            height: 44px;
+            background-color: #34b3db;
+            border-radius: 10px;
+            margin-top: 2.5rem;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: auto;
+            text-decoration: none;
+
+            p {
+              color: white;
+              font-size: 16px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              margin: auto;
+            }
           }
         }
       }
     }
   }
-}
 
-@media screen and (min-width: 769px) {
-}
+  @media screen and (min-width: 769px) {
+  }
 </style>
