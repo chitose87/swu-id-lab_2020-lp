@@ -1,89 +1,83 @@
 <template lang="pug">
   div
-    .main-visual
+    section.main-visual
       img.logo(src="/imgs/logo.png" alt="logo")
-      p.title
+      h1.title
         | 環境デザイン研究室
       p.subtitle
         | Information Design Laborayory
 
     section.about
       .container
-        p.discription
+        p
           | 昭和女子大学 情報デザイン研究室では主に、
           br
           | Webサイトの企画・作成を行います。
-        p.discription
+        p
           | 本業がWebクリエオターを中心に実際の現場と同じような進行とクリエイティビティを目指します。
         p
           | 第一線で活躍するプロのデザイナー、
           br
           | エンジニアを交えて「プロクオリティ」を前提とします。
 
-    section.section
+    section.teams
       .bg
         .catch
           img.img(src="/imgs/mone.png" alt="mone")
+      .head
+        h3.title
+          img(src="/imgs/Team.png" alt="Team")
 
-      h3.box
-        img.img(src="/imgs/Team.png" alt="Team")
-      .group
-        p.title Director
-        .content
-          p.subtitle
-            | 主に企画・ミーティング運営、
-            br
-            | スケジュール管理、
-            br
-            | プロジェクト全体の進行・管理
-            br
-            | を行います。
-          img(src="https://placehold.jp/250x150.png")
-      .group
-        p.title Designer
-        .content
-          img(src="https://placehold.jp/250x150.png")
-          p.subtitle
-            | Webサイトのデザインや、ロゴ
-            br
-            | の作成などを行います。
-            br
-            | Photoshopなどを用いてデザイ
-            br
-            | ンを作成します。
-      .group
-        p.title Engineer
-        .content
-          p.subtitle
-            | 主にWebサイトの設計やプログ
-            br
-            | ラミングを行います。
-          img(src="https://placehold.jp/250x150.png")
+      .body
+        .group
+          h4.title Director
+          .content
+            p
+              | 主に企画・ミーティング運営、
+              br
+              | スケジュール管理、
+              br
+              | プロジェクト全体の進行・管理を行います。
+            img(src="https://placehold.jp/250x150.png")
+        .group
+          h4.title Designer
+          .content
+            img(src="https://placehold.jp/250x150.png")
+            p.subtitle
+              | Webサイトのデザインや、ロゴの作成などを行います。
+              br
+              | Photoshopなどを用いてデザインを作成します。
+        .group
+          h4.title Engineer
+          .content
+            p.subtitle
+              | 主にWebサイトの設計やプログラミングを行います。
+            img(src="https://placehold.jp/250x150.png")
 
-    section.news-section
+      .foot
+        .container
+          p
+            | このコミュニティは枠にとらわれない自由な場です。
+            br
+            | 学生と変なおじさんでできた、
+          p
+            | ゆるいけど実際の現場と同じような進行方法で進んでいく集まりです。
+            br
+            | コンセプトはありません。
+
+    section.producer
       .container
-        p.discription
-          | このコミュニティは枠にとらわれない自由な場です。
-          br
-          | 学生と変なおじさんでできた、
-        p
-          | ゆるいけど実際の現場と同じような進行方法で
-          br
-          | 進んでいく集まりです。
-          br
-          | コンセプトはありません。
-
-    section.profile-section
-      .container
-        img(src="/imgs/Producer.png" alt="Producer")
+        h3.title
+          img(src="/imgs/Producer.png" alt="Producer")
         p.profile
           | 千歳 慎
           br
           | Interactive Designer
           br
           | 環境デザイン学科 非常勤講師
-        p.submit
-          a(href="#").button
+
+        .submit
+          a.button(href="#")
             | 参加申し込み
 
 </template>
@@ -100,195 +94,192 @@
 </script>
 
 <style lang="scss">
+  section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
   .container {
   }
 
+  /**
+
+   */
   .main-visual {
-    background-color: #34b3db;
-    max-width: 100%;
+    background-color: $color-blue;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 
     .logo {
-      display: block;
       margin: auto;
-      padding-top: 15rem;
-      padding-bottom: 12rem;
+      width: 25%;
+      height: auto;
     }
 
     .title {
-      color: white;
       font-size: 25px;
+      font-weight: normal;
       text-align: center;
-      margin-bottom: 0rem;
+      line-height: 1.2;
+      color: $color-white;
     }
 
     .subtitle {
       color: white;
       font-size: 14px;
       text-align: center;
-      padding-bottom: 5rem;
-      margin-bottom: 0rem;
+      line-height: 1;
+      margin-bottom: 0;
     }
   }
 
+  /**
+
+   */
   .about {
     .container {
-      margin-top: 5rem;
-      margin-bottom: 0rem;
-    }
-
-    .discription {
-      font-size: 14px;
-      padding-bottom: 2.5rem;
-      margin-bottom: 0rem;
     }
 
     p {
       font-size: 14px;
-      margin-bottom: 0rem;
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
-  .section {
-    margin-top: 5rem;
-    max-width: 100%;
-    padding-bottom: 4rem;
+  /**
+
+   */
+  .teams {
+    padding-top: 0;
+    padding-bottom: 0;
 
     .bg {
-      position: -webkit-sticky;
       position: sticky;
       top: 0;
       height: 0;
       z-index: -1;
 
       .catch {
-        padding: 0px;
         width: 100vw;
         height: 100vh;
 
         .img {
-          padding: 0px;
           object-fit: cover;
-          object-position: center;
+          object-position: center center;
           width: 100%;
           height: 100%;
         }
       }
     }
 
-    .box {
-      background: -moz-linear-gradient(top, #000, transparent);
-      background: -webkit-linear-gradient(top, #000, transparent);
+    .head {
       background: linear-gradient(
           to bottom,
           rgba(0, 0, 0, 0.6),
           rgba(0, 0, 0, 0)
       );
-
-      .img {
-        width: 160px;
-        height: auto;
-        display: block;
-        margin: auto;
-      }
-    }
-
-    .group {
-      padding: 1rem;
-      margin: 1rem;
-      background-color: white;
+      height: 5rem;
 
       .title {
-        font-size: 20px;
-        margin-bottom: 0rem;
         text-align: center;
-      }
-
-      .content {
-        display: flex;
-        justify-content: space-between;
 
         img {
-          width: 100px;
-          height: 100px;
-          margin-top: 1rem;
+          width: 164px;
+          height: auto;
+        }
+      }
+    }
+
+    .body {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+
+      .group {
+        padding-top: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background-color: $color-white;
+
+        .title {
+          font-size: 20px;
+          text-align: center;
+          margin-bottom: 1rem;
         }
 
-        .subtitle {
-          margin-top: 1rem;
-          padding: 0px;
+        .content {
+          display: flex;
+          justify-content: space-between;
+
+          img {
+            width: 100px;
+            height: 100px;
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .foot {
+      background-color: white;
+      padding-top: 5rem;
+
+      p {
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
   }
 
-  .news-section {
+  /**
+  
+   */
+  .producer {
     background-color: white;
 
-    .container {
-      padding-top: 5rem;
-    }
-
-    .discription {
-      margin-bottom: 2rem;
-    }
-
-    p {
-      margin: 0px;
-    }
-  }
-
-  .profile-section {
-    background-color: white;
-
-    img {
-      display: block;
-      margin: auto;
-      width: 280px;
-      height: auto;
-      padding-top: 5rem;
+    .title {
+      margin-top: 0;
+      text-align: center;
       margin-bottom: 2.5rem;
+
+      img {
+        width: 270px;
+        height: 80px;
+      }
     }
 
     .profile {
       text-align: center;
-      margin-top: 1rem;
-      margin-bottom: 4.375rem;
-
-      p {
-        margin: auto;
-        line-height: 1.5rem;
-        font-size: 14px;
-      }
     }
 
     .submit {
-      padding-bottom: 4rem;
-
-      a {
-        color: white;
-      }
+      margin-top: 4rem;
+      text-align: center;
 
       .button {
+        display: inline-flex;
         width: 220px;
         height: 44px;
-        background-color: #34b3db;
+        color: $color-white;
+        background-color: $color-blue;
         border-radius: 10px;
-        margin-top: 2.5rem;
-        display: flex;
         justify-content: center;
         align-items: center;
-        margin: auto;
         text-decoration: none;
-
-        p {
-          color: white;
-          font-size: 16px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          margin: auto;
-        }
       }
     }
   }
