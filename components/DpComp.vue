@@ -4,7 +4,7 @@
       .container
         .headline
           h2.title
-            img(src="../static/imgs/DP.png")
+            img(src="/imgs/DP.png")
 
           p.sub-title
             | 第28回 秋桜祭
@@ -54,7 +54,7 @@
             | よりいいコミュニティになると思います。
 
     .insert
-      img(src="../static/imgs/dp-insert.png")
+      img(src="/imgs/dp-insert.png")
 
     section.info
       .container
@@ -76,7 +76,7 @@
             | Mail：chitose87@gmail.com
 
         .submit
-          a(href="#").button
+          a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
             | 参加申し込み
 
 </template>

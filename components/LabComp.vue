@@ -43,14 +43,14 @@
           h4.title Designer
           .content
             img(src="https://placehold.jp/250x150.png")
-            p.subtitle
+            p
               | Webサイトのデザインや、ロゴの作成などを行います。
               br
               | Photoshopなどを用いてデザインを作成します。
         .group
           h4.title Engineer
           .content
-            p.subtitle
+            p
               | 主にWebサイトの設計やプログラミングを行います。
             img(src="https://placehold.jp/250x150.png")
 
@@ -77,7 +77,7 @@
           | 環境デザイン学科 非常勤講師
 
         .submit
-          a.button(href="#")
+          a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
             | 参加申し込み
 
 </template>
