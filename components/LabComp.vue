@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  .lab
     section.main-visual
       img.logo(src="/imgs/logo.png" alt="logo")
       h1.title
@@ -94,192 +94,173 @@
 </script>
 
 <style lang="scss">
-  section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
+  .lab {
+    /**
+    */
+    .main-visual {
+      background-color: $color-blue;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
 
-  .container {
-  }
+      .logo {
+        margin: auto;
+        width: 25%;
+        height: auto;
+      }
 
-  /**
+      .title {
+        font-size: 25px;
+        font-weight: normal;
+        text-align: center;
+        line-height: 1.2;
+        color: $color-white;
+      }
 
-   */
-  .main-visual {
-    background-color: $color-blue;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    .logo {
-      margin: auto;
-      width: 25%;
-      height: auto;
-    }
-
-    .title {
-      font-size: 25px;
-      font-weight: normal;
-      text-align: center;
-      line-height: 1.2;
-      color: $color-white;
-    }
-
-    .subtitle {
-      color: white;
-      font-size: 14px;
-      text-align: center;
-      line-height: 1;
-      margin-bottom: 0;
-    }
-  }
-
-  /**
-
-   */
-  .about {
-    .container {
-    }
-
-    p {
-      font-size: 14px;
-      margin-bottom: 2.5rem;
-
-      &:last-child {
+      .subtitle {
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1;
         margin-bottom: 0;
       }
     }
-  }
 
-  /**
+    /**
 
    */
-  .teams {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    .bg {
-      position: sticky;
-      top: 0;
-      height: 0;
-      z-index: -1;
-
-      .catch {
-        width: 100vw;
-        height: 100vh;
-
-        .img {
-          object-fit: cover;
-          object-position: center center;
-          width: 100%;
-          height: 100%;
-        }
+    .about {
+      .container {
       }
-    }
-
-    .head {
-      background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0)
-      );
-      height: 5rem;
-
-      .title {
-        text-align: center;
-
-        img {
-          width: 164px;
-          height: auto;
-        }
-      }
-    }
-
-    .body {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-
-      .group {
-        padding-top: 1rem;
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        background-color: $color-white;
-
-        .title {
-          font-size: 20px;
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-
-        .content {
-          display: flex;
-          justify-content: space-between;
-
-          img {
-            width: 100px;
-            height: 100px;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-            margin-bottom: 1rem;
-          }
-
-          p {
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-          }
-        }
-      }
-    }
-
-    .foot {
-      background-color: white;
-      padding-top: 5rem;
 
       p {
+        font-size: 14px;
+        margin-bottom: 2.5rem;
+
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
-  }
 
-  /**
-  
+    /**
+
    */
-  .producer {
-    background-color: white;
+    .teams {
+      padding-top: 0;
+      padding-bottom: 0;
 
-    .title {
-      margin-top: 0;
-      text-align: center;
-      margin-bottom: 2.5rem;
+      .bg {
+        position: sticky;
+        top: 0;
+        height: 0;
+        z-index: -1;
 
-      img {
-        width: 270px;
-        height: 80px;
+        .catch {
+          width: 100vw;
+          height: 100vh;
+
+          .img {
+            object-fit: cover;
+            object-position: center center;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .head {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0)
+        );
+        height: 5rem;
+
+        .title {
+          text-align: center;
+
+          img {
+            width: 164px;
+            height: auto;
+          }
+        }
+      }
+
+      .body {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+
+        .group {
+          padding-top: 1rem;
+          padding-right: 0.5rem;
+          padding-left: 0.5rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+          background-color: $color-white;
+
+          .title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 1rem;
+          }
+
+          .content {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+              width: 100px;
+              height: 100px;
+              margin-left: 0.5rem;
+              margin-right: 0.5rem;
+              margin-bottom: 1rem;
+            }
+
+            p {
+              margin-left: 0.5rem;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+
+      .foot {
+        background-color: white;
+        padding-top: 5rem;
+
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
       }
     }
 
-    .profile {
-      text-align: center;
-    }
+    /**
+  
+   */
+    .producer {
+      background-color: white;
 
-    .submit {
-      margin-top: 4rem;
-      text-align: center;
+      .title {
+        margin-top: 0;
+        text-align: center;
+        margin-bottom: 2.5rem;
 
-      .button {
-        display: inline-flex;
-        width: 220px;
-        height: 44px;
-        color: $color-white;
-        background-color: $color-blue;
-        border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
+        img {
+          width: 270px;
+          height: 80px;
+        }
+      }
+
+      .profile {
+        text-align: center;
+      }
+
+      .submit {
+        margin-top: 4rem;
+        text-align: center;
       }
     }
   }
