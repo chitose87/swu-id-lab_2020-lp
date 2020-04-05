@@ -1,7 +1,7 @@
 <template lang="pug">
   .lab
     section.main-visual
-      img.logo(src="/imgs/logo.png" alt="logo")
+      img.logo(src="/swu-id-lab_2020-lp/imgs/logo.png" alt="logo")
       h1.title
         | 環境デザイン研究室
       p.subtitle
@@ -23,10 +23,10 @@
     section.teams
       .bg
         .catch
-          img.img(src="/imgs/mone.png" alt="mone")
+          img.img(src="/swu-id-lab_2020-lp/imgs/mone.png" alt="mone")
       .head
         h3.title
-          img(src="/imgs/Team.png" alt="Team")
+          img(src="/swu-id-lab_2020-lp/imgs/Team.png" alt="Team")
 
       .body
         .group
@@ -68,7 +68,7 @@
     section.producer
       .container
         h3.title
-          img(src="/imgs/Producer.png" alt="Producer")
+          img(src="/swu-id-lab_2020-lp/imgs/Producer.png" alt="Producer")
         p.profile
           | 千歳 慎
           br

@@ -50,6 +50,7 @@ export default {
   ** Build configuration
   */
   build: {
+    publicPath: '/swu-id-lab_2020-lp/',
     vendor: [],
     /*
     ** You can extend webpack config here
