@@ -56,7 +56,6 @@ export default {
   ** Build configuration
   */
   build: {
-    // publicPath: '/swu-id-lab_2020-lp/',
     vendor: [],
     /*
     ** You can extend webpack config here
@@ -74,10 +73,10 @@ export default {
     typeCheck: true,
     ignoreNotFoundWarnings: true
   },
-  ...routerBase,
-  // router: {
-  //   base: '/swu-id-lab_2020-lp/'
-  // },
+  // ...routerBase,
+  router: {
+    base: '/swu-id-lab_2020-lp/'
+  },
   generate: {
     dir: "docs"
   }
