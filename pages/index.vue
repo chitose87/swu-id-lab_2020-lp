@@ -24,8 +24,14 @@
 
 <style lang="scss">
   section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    @include mediaquery-not-sm {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+    @include mediaquery-sm {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
   }
 
   .button {

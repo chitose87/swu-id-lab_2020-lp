@@ -4,7 +4,7 @@
       .container
         .headline
           h2.title
-            img(src="/swu-id-lab_2020-lp/imgs/DP.png")
+            img(src="~/assets/imgs/DP.png")
 
           p.sub-title
             | 第28回 秋桜祭
@@ -54,7 +54,7 @@
             | よりいいコミュニティになると思います。
 
     .insert
-      img(src="/swu-id-lab_2020-lp/imgs/dp-insert.png")
+      img(src="~/assets/imgs/dp-insert.png")
 
     section.info
       .container

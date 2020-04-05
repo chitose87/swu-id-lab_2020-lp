@@ -11,7 +11,7 @@ export default {
       {hid: 'description', name: 'description', content: ''}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      {rel: 'icon', type: 'image/x-icon', href: '/swu-id-lab_2020-lp/favicon.ico'}
     ]
   },
   /*
@@ -50,7 +50,7 @@ export default {
   ** Build configuration
   */
   build: {
-    publicPath: '/swu-id-lab_2020-lp/',
+    // publicPath: '/swu-id-lab_2020-lp/',
     vendor: [],
     /*
     ** You can extend webpack config here
@@ -67,5 +67,11 @@ export default {
   typescript: {
     typeCheck: true,
     ignoreNotFoundWarnings: true
+  },
+  router: {
+    base: '/swu-id-lab_2020-lp/'
+  },
+  generate: {
+    dir: "docs"
   }
 }

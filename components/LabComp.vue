@@ -1,7 +1,7 @@
 <template lang="pug">
   .lab
     section.main-visual
-      img.logo(src="/swu-id-lab_2020-lp/imgs/logo.png" alt="logo")
+      img.logo(src="~/assets/imgs/logo.png" alt="logo")
       h1.title
         | 環境デザイン研究室
       p.subtitle
@@ -23,36 +23,37 @@
     section.teams
       .bg
         .catch
-          img.img(src="/swu-id-lab_2020-lp/imgs/mone.png" alt="mone")
+          img.img(src="~/assets/imgs/mone.png" alt="mone")
       .head
         h3.title
-          img(src="/swu-id-lab_2020-lp/imgs/Team.png" alt="Team")
+          img(src="~/assets/imgs/Team.png" alt="Team")
 
       .body
-        .group
-          h4.title Director
-          .content
-            p
-              | 主に企画・ミーティング運営、
-              br
-              | スケジュール管理、
-              br
-              | プロジェクト全体の進行・管理を行います。
-            img(src="https://placehold.jp/250x150.png")
-        .group
-          h4.title Designer
-          .content
-            img(src="https://placehold.jp/250x150.png")
-            p
-              | Webサイトのデザインや、ロゴの作成などを行います。
-              br
-              | Photoshopなどを用いてデザインを作成します。
-        .group
-          h4.title Engineer
-          .content
-            p
-              | 主にWebサイトの設計やプログラミングを行います。
-            img(src="https://placehold.jp/250x150.png")
+        .container
+          .group
+            h4.title Director
+            .content
+              p
+                | 主に企画・ミーティング運営、
+                br
+                | スケジュール管理、
+                br
+                | プロジェクト全体の進行・管理を行います。
+              img(src="https://placehold.jp/250x150.png")
+          .group
+            h4.title Designer
+            .content
+              img(src="https://placehold.jp/250x150.png")
+              p
+                | Webサイトのデザインや、ロゴの作成などを行います。
+                br
+                | Photoshopなどを用いてデザインを作成します。
+          .group
+            h4.title Engineer
+            .content
+              p
+                | 主にWebサイトの設計やプログラミングを行います。
+              img(src="https://placehold.jp/250x150.png")
 
       .foot
         .container
@@ -68,7 +69,7 @@
     section.producer
       .container
         h3.title
-          img(src="/swu-id-lab_2020-lp/imgs/Producer.png" alt="Producer")
+          img(src="~/assets/imgs/Producer.png" alt="Producer")
         p.profile
           | 千歳 慎
           br
@@ -103,10 +104,20 @@
       display: flex;
       flex-direction: column;
 
+      @include mediaquery-not-sm {
+        justify-content: center;
+        align-items: center;
+      }
+
       .logo {
-        margin: auto;
-        width: 25%;
         height: auto;
+        @include mediaquery-not-sm {
+          width: 10%;
+        }
+        @include mediaquery-sm {
+          margin: auto;
+          width: 25%;
+        }
       }
 
       .title {
@@ -115,11 +126,14 @@
         text-align: center;
         line-height: 1.2;
         color: $color-white;
+        @include mediaquery-not-sm {
+          margin-top: 3rem;
+        }
       }
 
       .subtitle {
         color: white;
-        font-size: 14px;
+        /*font-size: 14px;*/
         text-align: center;
         line-height: 1;
         margin-bottom: 0;
@@ -134,7 +148,7 @@
       }
 
       p {
-        font-size: 14px;
+        //font-size: 14px;
         margin-bottom: 2.5rem;
 
         &:last-child {
@@ -188,8 +202,16 @@
       }
 
       .body {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+        .container {
+          /*padding-left: 1.5rem;*/
+          /*padding-right: 1.5rem;*/
+          @include mediaquery-not-sm {
+
+          }
+          @include mediaquery-sm {
+
+          }
+        }
 
         .group {
           padding-top: 1rem;
