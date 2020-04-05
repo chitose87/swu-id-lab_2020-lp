@@ -1,3 +1,9 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/swu-id-lab_2020-lp/'
+  }
+} : {};
+
 export default {
   mode: 'universal',
   /*
@@ -68,9 +74,10 @@ export default {
     typeCheck: true,
     ignoreNotFoundWarnings: true
   },
-  router: {
-    base: '/swu-id-lab_2020-lp/'
-  },
+  ...routerBase,
+  // router: {
+  //   base: '/swu-id-lab_2020-lp/'
+  // },
   generate: {
     dir: "docs"
   }
