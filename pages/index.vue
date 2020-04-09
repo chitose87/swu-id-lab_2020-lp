@@ -34,16 +34,43 @@
     }
   }
 
+  .title {
+    img {
+      width: auto;
+    }
+
+    @include mediaquery-not-sm {
+      margin-bottom: 3rem;
+      img {
+        height: 80px;
+      }
+    }
+    @include mediaquery-sm {
+      margin-bottom: 1.5rem;
+      img {
+        height: 50px;
+      }
+    }
+  }
+
   .button {
     display: inline-flex;
-    width: 220px;
-    height: 44px;
     color: $color-white;
     background-color: $color-blue;
-    border-radius: 10px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    @include mediaquery-not-sm {
+      width: 20rem;
+      height: 3.5rem;
+      border-radius: 1rem;
+      font-size: 20px;
+    }
+    @include mediaquery-sm {
+      width: 220px;
+      height: 44px;
+      border-radius: 0.5rem;
+    }
   }
 
   footer {

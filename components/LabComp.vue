@@ -1,11 +1,9 @@
 <template lang="pug">
   .lab
     section.main-visual
-      img.logo(src="~/assets/imgs/logo.png" alt="logo")
+      img.logo(src="~/assets/imgs/logo.svg" alt="logo")
       h1.title
-        | 環境デザイン研究室
-      p.subtitle
-        | Information Design Laborayory
+        img(src="~/assets/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
 
     section.about
       .container
@@ -23,59 +21,64 @@
     section.teams
       .bg
         .catch
-          img.img(src="~/assets/imgs/mone.png" alt="mone")
+          img.img(src="~/assets/imgs/lab-bg.jpg" alt="lab")
       .head
         h3.title
-          img(src="~/assets/imgs/Team.png" alt="Team")
+          img(src="~/assets/imgs/title-team.svg" alt="Team")
 
       .body
         .container
-          .group
+          .group.director
             h4.title Director
             .content
+              .img
+                img(src="~/assets/imgs/team-director.png")
               p
                 | 主に企画・ミーティング運営、
                 br
                 | スケジュール管理、
                 br
                 | プロジェクト全体の進行・管理を行います。
-              img(src="https://placehold.jp/250x150.png")
-          .group
+          .group.designer
             h4.title Designer
             .content
-              img(src="https://placehold.jp/250x150.png")
+              .img
+                img(src="~/assets/imgs/team-designer.png")
               p
                 | Webサイトのデザインや、ロゴの作成などを行います。
                 br
                 | Photoshopなどを用いてデザインを作成します。
-          .group
+          .group.engineer
             h4.title Engineer
             .content
+              .img
+                img(src="~/assets/imgs/team-engineer.png")
               p
                 | 主にWebサイトの設計やプログラミングを行います。
-              img(src="https://placehold.jp/250x150.png")
 
-      .foot
-        .container
-          p
-            | このコミュニティは枠にとらわれない自由な場です。
-            br
-            | 学生と変なおじさんでできた、
-          p
-            | ゆるいけど実際の現場と同じような進行方法で進んでいく集まりです。
-            br
-            | コンセプトはありません。
-
-    section.producer
+    section.community
       .container
-        h3.title
-          img(src="~/assets/imgs/Producer.png" alt="Producer")
-        p.profile
-          | 千歳 慎
-          br
-          | Interactive Designer
-          br
-          | 環境デザイン学科 非常勤講師
+        .layout
+          .producer
+            h3.title
+              img(src="~/assets/imgs/title-producer.svg" alt="Producer")
+            p.profile
+              | 千歳 慎
+              br
+              | Interactive Designer
+              br
+              | 環境デザイン学科 非常勤講師
+
+
+          .message
+            p
+              | このコミュニティは枠にとらわれない自由な場です。
+              br
+              | 学生と変なおじさんでできた、
+            p
+              | ゆるいけど実際の現場と同じような進行方法で進んでいく集まりです。
+              br
+              | コンセプトはありません。
 
         .submit
           a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
@@ -107,6 +110,7 @@
       @include mediaquery-not-sm {
         justify-content: center;
         align-items: center;
+        padding-bottom: 0;
       }
 
       .logo {
@@ -121,11 +125,10 @@
       }
 
       .title {
-        font-size: 25px;
-        font-weight: normal;
         text-align: center;
-        line-height: 1.2;
-        color: $color-white;
+        img {
+          filter: invert(1);
+        }
         @include mediaquery-not-sm {
           margin-top: 3rem;
         }
@@ -171,14 +174,24 @@
         z-index: -1;
 
         .catch {
-          width: 100vw;
-          height: 100vh;
-
           .img {
             object-fit: cover;
-            object-position: center center;
+            object-position: 70% 40%;
             width: 100%;
             height: 100%;
+          }
+        }
+
+        @include mediaquery-not-sm {
+          .catch {
+            width: 100%;
+            height: 750px;
+          }
+        }
+        @include mediaquery-sm {
+          .catch {
+            width: 100vw;
+            height: 100vh;
           }
         }
       }
@@ -189,54 +202,103 @@
             rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0)
         );
-        height: 5rem;
+        @include mediaquery-not-sm {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+        @include mediaquery-sm {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
 
         .title {
           text-align: center;
+          margin-bottom: 0;
 
           img {
-            width: 164px;
-            height: auto;
+            filter: invert(1);
           }
         }
       }
 
       .body {
-        .container {
-          /*padding-left: 1.5rem;*/
-          /*padding-right: 1.5rem;*/
-          @include mediaquery-not-sm {
+        @include mediaquery-not-sm {
+          padding-top: 1rem;
+          padding-bottom: 7rem;
+        }
+        @include mediaquery-sm{
+          padding-bottom: 5rem;
+        }
 
+        .container {
+          @include mediaquery-not-sm {
+            display: flex;
+            justify-content: space-between;
           }
           @include mediaquery-sm {
-
+            padding-left: 1rem;
+            padding-right: 1rem;
           }
         }
 
         .group {
-          padding-top: 1rem;
-          padding-right: 0.5rem;
-          padding-left: 0.5rem;
-          margin-top: 1rem;
-          margin-bottom: 1rem;
           background-color: $color-white;
+          box-shadow: $shadow;
+          border-radius: 16px;
+          @include mediaquery-not-sm {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: calc((100% - 3rem) / 3);
+            padding-top: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+          @include mediaquery-sm {
+            padding-top: 1rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            margin-top: 1.5rem;
+          }
 
           .title {
             font-size: 20px;
             text-align: center;
             margin-bottom: 1rem;
+            @include mediaquery-not-sm {
+              margin-top: 1rem;
+            }
           }
 
           .content {
-            display: flex;
-            justify-content: space-between;
+            @include mediaquery-not-sm {
 
-            img {
-              width: 100px;
-              height: 100px;
-              margin-left: 0.5rem;
-              margin-right: 0.5rem;
-              margin-bottom: 1rem;
+            }
+            @include mediaquery-sm {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .img {
+              @include mediaquery-not-sm {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                img {
+                  width: 75%;
+                  height: auto;
+                }
+              }
+              @include mediaquery-sm {
+                margin-top: -50px;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                display: flex;
+                align-items: center;
+                min-height: 150px;
+                img {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
             }
 
             p {
@@ -244,45 +306,67 @@
               margin-right: 0.5rem;
             }
           }
-        }
-      }
 
-      .foot {
-        background-color: white;
-        padding-top: 5rem;
-
-        p {
-          &:last-child {
-            margin-bottom: 0;
+          @include mediaquery-sm {
+            &.director, &.engineer {
+              .content {
+                flex-direction: row-reverse;
+              }
+            }
           }
         }
       }
     }
 
     /**
-  
+
    */
-    .producer {
+    .community {
       background-color: white;
 
-      .title {
-        margin-top: 0;
-        text-align: center;
-        margin-bottom: 2.5rem;
+      .container {
 
-        img {
-          width: 270px;
-          height: 80px;
+        .layout {
+          display: flex;
+          @include mediaquery-not-sm {
+            justify-content: center;
+            align-items: flex-start;
+          }
+          @include mediaquery-sm {
+            flex-direction: column-reverse;
+          }
         }
-      }
 
-      .profile {
-        text-align: center;
-      }
+        .producer {
+          @include mediaquery-not-sm {
+            flex: 1;
+          }
 
-      .submit {
-        margin-top: 4rem;
-        text-align: center;
+          .title {
+            margin-top: 0;
+            text-align: center;
+          }
+
+          .profile {
+            text-align: center;
+          }
+
+        }
+
+        .message {
+          @include mediaquery-not-sm {
+            flex: 1;
+            border-left: 1px solid $color-border;
+            margin-left: 2rem;
+            padding-top: 1rem;
+            padding-left: 2rem;
+          }
+        }
+
+        .submit {
+          margin-top: 4rem;
+          text-align: center;
+        }
       }
     }
   }
