@@ -1,9 +1,9 @@
 <template lang="pug">
   .lab
     section.main-visual
-      img.logo(src="~/assets/imgs/logo.svg" alt="logo")
+      img.logo(src="/imgs/logo.svg" alt="logo")
       h1.title
-        img(src="~/assets/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
+        img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
 
     section.about
       .container
@@ -21,10 +21,10 @@
     section.teams
       .bg
         .catch
-          img.img(src="~/assets/imgs/lab-bg.jpg" alt="lab")
+          img.img(src="/imgs/lab-bg.jpg" alt="lab")
       .head
         h3.title
-          img(src="~/assets/imgs/title-team.svg" alt="Team")
+          img(src="/imgs/title-team.svg" alt="Team")
 
       .body
         .container
@@ -32,7 +32,7 @@
             h4.title Director
             .content
               .img
-                img(src="~/assets/imgs/team-director.png")
+                img(src="/imgs/team-director.png")
               p
                 | 主に企画・ミーティング運営、
                 br
@@ -43,7 +43,7 @@
             h4.title Designer
             .content
               .img
-                img(src="~/assets/imgs/team-designer.png")
+                img(src="/imgs/team-designer.png")
               p
                 | Webサイトのデザインや、ロゴの作成などを行います。
                 br
@@ -52,7 +52,7 @@
             h4.title Engineer
             .content
               .img
-                img(src="~/assets/imgs/team-engineer.png")
+                img(src="/imgs/team-engineer.png")
               p
                 | 主にWebサイトの設計やプログラミングを行います。
 
@@ -61,7 +61,7 @@
         .layout
           .producer
             h3.title
-              img(src="~/assets/imgs/title-producer.svg" alt="Producer")
+              img(src="/imgs/title-producer.svg" alt="Producer")
             p.profile
               | 千歳 慎
               br

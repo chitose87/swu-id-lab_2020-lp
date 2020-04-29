@@ -1,8 +1,8 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/swu-id-lab_2020-lp/'
-  }
-} : {};
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/swu-id-lab_2020-lp/'
+//   }
+// } : {};
 
 export default {
   mode: 'universal',
@@ -56,7 +56,7 @@ export default {
   ** Build configuration
   */
   build: {
-    publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/swu-id-lab_2020-lp/' : '',
+    // publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/swu-id-lab_2020-lp/' : '',
     vendor: [],
     /*
     ** You can extend webpack config here

@@ -4,7 +4,7 @@
       .container
         .headline
           h2.title
-            img(src="~/assets/imgs/title-dp.svg")
+            img(src="/imgs/title-dp.svg")
 
           p.sub-title
             | 第28回 秋桜祭
@@ -24,11 +24,11 @@
     section.contents
       .bg
         .catch
-          img.img(src="~/assets/imgs/dp-bg.jpg" alt="dp")
+          img.img(src="/imgs/dp-bg.jpg" alt="dp")
       .head
         .container
           h3.title
-            img(src="~/assets/imgs/title-contents.svg" alt="Team")
+            img(src="/imgs/title-contents.svg" alt="Team")
 
           p.lead
             | 現時点では、学生を中心に
@@ -65,7 +65,7 @@
     section.joinus
       .container
         h2.title
-          img(src="~/assets/imgs/title-joinus.svg")
+          img(src="/imgs/title-joinus.svg")
         p
           | 自分の好きなことが活かせそう…!」という人と
           br
@@ -97,7 +97,7 @@
 
     .insert
       .container
-        img(src="~/assets/imgs/dp-insert.jpg")
+        img(src="/imgs/dp-insert.jpg")
 
     section.info
       .container
