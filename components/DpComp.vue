@@ -20,6 +20,7 @@
             | 企画からデザイン、コンテンツ制作、広報まで
             br.isSp
             | 学生を中心に計画・実施します.
+          p *COVID-19の影響で企画を再検討中です。
 
     section.contents
       .bg
@@ -108,19 +109,21 @@
           p
             | 4月～秋桜祭のレポートをアップするまで
           p
-            | 初回ミーティングは、
+            strike 初回ミーティングは、
             br
-            | 4/25 14:00
+            strike  4/25 14:00
             br
-            | 6号館2階 2L02教室で行います。
+            strike 6号館2階 2L02教室で行います。
           p
             | 連絡先
             br
             | Mail：chitose87@gmail.com
+          p *COVID-19の影響で企画を再検討中です。
 
         .submit
           a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
             | 参加申し込み
+          p *参加申し込みは受け付けています
 
 </template>
 
@@ -371,7 +374,7 @@
     .insert {
       background-color: $color-red;
       @include mediaquery-sm {
-        .container{
+        .container {
           padding: 0;
         }
       }

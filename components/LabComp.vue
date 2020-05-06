@@ -72,13 +72,11 @@
 
           .message
             p
-              | このコミュニティは枠にとらわれない自由な場です。
-              br
-              | 学生と変なおじさんでできた、
+              | このコミュニティは学生主体の、枠にとらわれない自由な場です。
             p
               | ゆるいけど実際の現場と同じような進行方法で進んでいく集まりです。
               br
-              | コンセプトはありません。
+              | 明確なコンセプトはありません。
 
         .submit
           a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
