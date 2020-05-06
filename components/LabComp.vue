@@ -1,11 +1,9 @@
 <template lang="pug">
-  div
+  .lab
     section.main-visual
-      img.logo(src="/imgs/logo.png" alt="logo")
+      img.logo(src="/imgs/logo.svg" alt="logo")
       h1.title
-        | 環境デザイン研究室
-      p.subtitle
-        | Information Design Laborayory
+        img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
 
     section.about
       .container
@@ -23,61 +21,67 @@
     section.teams
       .bg
         .catch
-          img.img(src="/imgs/mone.png" alt="mone")
+          img.img(src="/imgs/lab-bg.jpg" alt="lab")
       .head
         h3.title
-          img(src="/imgs/Team.png" alt="Team")
+          img(src="/imgs/title-team.svg" alt="Team")
 
       .body
-        .group
-          h4.title Director
-          .content
-            p
-              | 主に企画・ミーティング運営、
-              br
-              | スケジュール管理、
-              br
-              | プロジェクト全体の進行・管理を行います。
-            img(src="https://placehold.jp/250x150.png")
-        .group
-          h4.title Designer
-          .content
-            img(src="https://placehold.jp/250x150.png")
-            p.subtitle
-              | Webサイトのデザインや、ロゴの作成などを行います。
-              br
-              | Photoshopなどを用いてデザインを作成します。
-        .group
-          h4.title Engineer
-          .content
-            p.subtitle
-              | 主にWebサイトの設計やプログラミングを行います。
-            img(src="https://placehold.jp/250x150.png")
-
-      .foot
         .container
-          p
-            | このコミュニティは枠にとらわれない自由な場です。
-            br
-            | 学生と変なおじさんでできた、
-          p
-            | ゆるいけど実際の現場と同じような進行方法で進んでいく集まりです。
-            br
-            | コンセプトはありません。
+          .group.director
+            h4.title Director
+            .content
+              .img
+                img(src="/imgs/team-director.png")
+              p
+                | 主に企画・ミーティング運営、
+                br
+                | スケジュール管理、
+                br
+                | プロジェクト全体の進行・管理を行います。
+          .group.designer
+            h4.title Designer
+            .content
+              .img
+                img(src="/imgs/team-designer.png")
+              p
+                | Webサイトのデザインや、ロゴの作成などを行います。
+                br
+                | Photoshopなどを用いてデザインを作成します。
+          .group.engineer
+            h4.title Engineer
+            .content
+              .img
+                img(src="/imgs/team-engineer.png")
+              p
+                | 主にWebサイトの設計やプログラミングを行います。
 
-    section.producer
+    section.community
       .container
-        h3.title
-          img(src="/imgs/Producer.png" alt="Producer")
-        p.profile
-          | 千歳 慎
-          br
-          | Interactive Designer
-          br
-          | 環境デザイン学科 非常勤講師
+        .layout
+          .producer
+            h3.title
+              img(src="/imgs/title-producer.svg" alt="Producer")
+            p.profile
+              | 千歳 慎
+              br
+              | Interactive Designer
+              br
+              | 環境デザイン学科 非常勤講師
+
+
+          .message
+            p
+              | このコミュニティは枠にとらわれない自由な場です。
+              br
+              | 学生と変なおじさんでできた、
+            p
+              | ゆるいけど実際の現場と同じような進行方法で進んでいく集まりです。
+              br
+              | コンセプトはありません。
 
         .submit
-          a.button(href="#")
+          a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
             | 参加申し込み
 
 </template>
@@ -94,192 +98,275 @@
 </script>
 
 <style lang="scss">
-  section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
+  .lab {
+    /**
+    */
+    .main-visual {
+      background-color: $color-blue;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
 
-  .container {
-  }
-
-  /**
-
-   */
-  .main-visual {
-    background-color: $color-blue;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-
-    .logo {
-      margin: auto;
-      width: 25%;
-      height: auto;
-    }
-
-    .title {
-      font-size: 25px;
-      font-weight: normal;
-      text-align: center;
-      line-height: 1.2;
-      color: $color-white;
-    }
-
-    .subtitle {
-      color: white;
-      font-size: 14px;
-      text-align: center;
-      line-height: 1;
-      margin-bottom: 0;
-    }
-  }
-
-  /**
-
-   */
-  .about {
-    .container {
-    }
-
-    p {
-      font-size: 14px;
-      margin-bottom: 2.5rem;
-
-      &:last-child {
-        margin-bottom: 0;
+      @include mediaquery-not-sm {
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
       }
-    }
-  }
 
-  /**
-
-   */
-  .teams {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    .bg {
-      position: sticky;
-      top: 0;
-      height: 0;
-      z-index: -1;
-
-      .catch {
-        width: 100vw;
-        height: 100vh;
-
-        .img {
-          object-fit: cover;
-          object-position: center center;
-          width: 100%;
-          height: 100%;
+      .logo {
+        height: auto;
+        @include mediaquery-not-sm {
+          width: 10%;
+        }
+        @include mediaquery-sm {
+          margin: auto;
+          width: 25%;
         }
       }
-    }
-
-    .head {
-      background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.6),
-          rgba(0, 0, 0, 0)
-      );
-      height: 5rem;
 
       .title {
         text-align: center;
-
         img {
-          width: 164px;
-          height: auto;
+          filter: invert(1);
         }
+        @include mediaquery-not-sm {
+          margin-top: 3rem;
+        }
+      }
+
+      .subtitle {
+        color: white;
+        /*font-size: 14px;*/
+        text-align: center;
+        line-height: 1;
+        margin-bottom: 0;
       }
     }
 
-    .body {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
+    /**
 
-      .group {
-        padding-top: 1rem;
-        padding-right: 0.5rem;
-        padding-left: 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        background-color: $color-white;
-
-        .title {
-          font-size: 20px;
-          text-align: center;
-          margin-bottom: 1rem;
-        }
-
-        .content {
-          display: flex;
-          justify-content: space-between;
-
-          img {
-            width: 100px;
-            height: 100px;
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-            margin-bottom: 1rem;
-          }
-
-          p {
-            margin-left: 0.5rem;
-            margin-right: 0.5rem;
-          }
-        }
+   */
+    .about {
+      .container {
       }
-    }
-
-    .foot {
-      background-color: white;
-      padding-top: 5rem;
 
       p {
+        //font-size: 14px;
+        margin-bottom: 2.5rem;
+
         &:last-child {
           margin-bottom: 0;
         }
       }
     }
-  }
 
-  /**
-  
+    /**
+
    */
-  .producer {
-    background-color: white;
+    .teams {
+      padding-top: 0;
+      padding-bottom: 0;
 
-    .title {
-      margin-top: 0;
-      text-align: center;
-      margin-bottom: 2.5rem;
+      .bg {
+        position: sticky;
+        top: 0;
+        height: 0;
+        z-index: -1;
 
-      img {
-        width: 270px;
-        height: 80px;
+        .catch {
+          .img {
+            object-fit: cover;
+            object-position: 70% 40%;
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        @include mediaquery-not-sm {
+          .catch {
+            width: 100%;
+            height: 750px;
+          }
+        }
+        @include mediaquery-sm {
+          .catch {
+            width: 100vw;
+            height: 100vh;
+          }
+        }
+      }
+
+      .head {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0)
+        );
+        @include mediaquery-not-sm {
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+        @include mediaquery-sm {
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .title {
+          text-align: center;
+          margin-bottom: 0;
+
+          img {
+            filter: invert(1);
+          }
+        }
+      }
+
+      .body {
+        @include mediaquery-not-sm {
+          padding-top: 1rem;
+          padding-bottom: 7rem;
+        }
+        @include mediaquery-sm{
+          padding-bottom: 5rem;
+        }
+
+        .container {
+          @include mediaquery-not-sm {
+            display: flex;
+            justify-content: space-between;
+          }
+          @include mediaquery-sm {
+            padding-left: 1rem;
+            padding-right: 1rem;
+          }
+        }
+
+        .group {
+          background-color: $color-white;
+          box-shadow: $shadow;
+          border-radius: 16px;
+          @include mediaquery-not-sm {
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: calc((100% - 3rem) / 3);
+            padding-top: 1rem;
+            padding-right: 1rem;
+            padding-left: 1rem;
+          }
+          @include mediaquery-sm {
+            padding-top: 1rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            margin-top: 1.5rem;
+          }
+
+          .title {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 1rem;
+            @include mediaquery-not-sm {
+              margin-top: 1rem;
+            }
+          }
+
+          .content {
+            @include mediaquery-not-sm {
+
+            }
+            @include mediaquery-sm {
+              display: flex;
+              justify-content: space-between;
+            }
+
+            .img {
+              @include mediaquery-not-sm {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                img {
+                  width: 75%;
+                  height: auto;
+                }
+              }
+              @include mediaquery-sm {
+                margin-top: -50px;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                display: flex;
+                align-items: center;
+                min-height: 150px;
+                img {
+                  width: 100px;
+                  height: 100px;
+                }
+              }
+            }
+
+            p {
+              margin-left: 0.5rem;
+              margin-right: 0.5rem;
+            }
+          }
+
+          @include mediaquery-sm {
+            &.director, &.engineer {
+              .content {
+                flex-direction: row-reverse;
+              }
+            }
+          }
+        }
       }
     }
 
-    .profile {
-      text-align: center;
-    }
+    /**
 
-    .submit {
-      margin-top: 4rem;
-      text-align: center;
+   */
+    .community {
+      background-color: white;
 
-      .button {
-        display: inline-flex;
-        width: 220px;
-        height: 44px;
-        color: $color-white;
-        background-color: $color-blue;
-        border-radius: 10px;
-        justify-content: center;
-        align-items: center;
-        text-decoration: none;
+      .container {
+
+        .layout {
+          display: flex;
+          @include mediaquery-not-sm {
+            justify-content: center;
+            align-items: flex-start;
+          }
+          @include mediaquery-sm {
+            flex-direction: column-reverse;
+          }
+        }
+
+        .producer {
+          @include mediaquery-not-sm {
+            flex: 1;
+          }
+
+          .title {
+            margin-top: 0;
+            text-align: center;
+          }
+
+          .profile {
+            text-align: center;
+          }
+
+        }
+
+        .message {
+          @include mediaquery-not-sm {
+            flex: 1;
+            border-left: 1px solid $color-border;
+            margin-left: 2rem;
+            padding-top: 1rem;
+            padding-left: 2rem;
+          }
+        }
+
+        .submit {
+          margin-top: 4rem;
+          text-align: center;
+        }
       }
     }
   }

@@ -1,3 +1,9 @@
+// const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+//   router: {
+//     base: '/swu-id-lab_2020-lp/'
+//   }
+// } : {};
+
 export default {
   mode: 'universal',
   /*
@@ -11,7 +17,7 @@ export default {
       {hid: 'description', name: 'description', content: ''}
     ],
     link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+      {rel: 'icon', type: 'image/x-icon', href: '/swu-id-lab_2020-lp/favicon.ico'}
     ]
   },
   /*
@@ -39,7 +45,7 @@ export default {
   */
   modules: [
     '@nuxtjs/style-resources',
-    ['@nuxtjs/google-tag-manager', {id: 'GTM-P69XCM6'}],
+    // ['@nuxtjs/google-tag-manager', {id: ''}],
   ],
   styleResources: {
     scss: [
@@ -50,6 +56,7 @@ export default {
   ** Build configuration
   */
   build: {
+    // publicPath: process.env.DEPLOY_ENV === 'GH_PAGES' ? '/swu-id-lab_2020-lp/' : '',
     vendor: [],
     /*
     ** You can extend webpack config here
@@ -66,5 +73,12 @@ export default {
   typescript: {
     typeCheck: true,
     ignoreNotFoundWarnings: true
-  }
+  },
+  // ...routerBase,
+  // router: {
+  //   base: '/swu-id-lab_2020-lp/'
+  // },
+  // generate: {
+  //   dir: "docs"
+  // }
 }
