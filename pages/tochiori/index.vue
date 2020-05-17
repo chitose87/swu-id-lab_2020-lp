@@ -206,6 +206,7 @@ export default class TochioriPageComp extends Vue {}
 .activities {
   margin-left: 30px;
   background-image: url("/imgs/katudou.png");
+  background-position: center;
   p {
     color: #ffffff;
   }
