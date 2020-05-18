@@ -67,7 +67,14 @@
                 br
                 | 主に3つのチームに分かれて進めていきます。
           .box
+            //- １
+            //- v-bindは属性を値の変化に応じて反映する
+            //- isDirectionが
+            //- trueだったら、active="true"が付与される。
+            //- falseだったら、何も付与されない。
             .unit.Direction(v-bind:active="isDirection")
+              //- ２
+              //- v-onは〇〇したら、指定の関数を実行する
               .unit__panel(v-on:click="directionClick()")
                 p.unit__name
                   | Direction
@@ -155,11 +162,22 @@ import { Vue } from "~/node_modules/nuxt-property-decorator";
   components: {}
 })
 export default class TochioriPageComp extends Vue {
+  // ディレクションがactiveかどうか
+  // １で使ってる
   isDirection: boolean = false;
 
+  // ２のところ、ディレクションがクリックされたときに呼ばれる関数
   directionClick() {
     console.log("directionClick");
     this.isDirection = !this.isDirection;
+
+    /*
+    上と同じ意味
+    if (this.isDirection) {
+      this.isDirection = false;
+    } else {
+      this.isDirection = true;
+    }*/
   }
 }
 </script>
@@ -336,9 +354,9 @@ export default class TochioriPageComp extends Vue {
           z-index: 1;
           padding-left: 75px;
 
-          transition: all 0.4s ease-in-out 0s;
+          transition: all 3s ease-in-out 0s;
           img {
-            transition: all 0.4s ease-in-out 0s;
+            transition: all 3s ease-in-out 0s;
           }
         }
         &__detail {
