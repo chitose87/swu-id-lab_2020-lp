@@ -87,18 +87,38 @@
                   進行・管理を行います。
 
 
-            .Designer
-              p.unit__name
-                | Designer
-              img(src="/imgs/yajirusi.png" alt="yajirusi")
-            .Programming
-              p.unit__name
-                | programming
-              img(src="/imgs/yajirusi.png" alt="yajirusi")
-            .Chief
-              p.unit__name
-                | Chief
-              img(src="/imgs/yajirusi.png" alt="yajirusi")
+            .unit.Designer(v-bind:active="isDesigner")
+              .unit__panel(v-on:click="designerClick()")
+                p.unit__name
+                  | Designer
+                img(src="/imgs/yajirusi.png" alt="yajirusi")
+              .unit__detail
+                p.
+                  Webサイトのデザインや、<br>
+                  ロゴの制作などを行います。<br>
+                  Photoshopなどを<br>
+                  用いてデザインを作成します。
+
+            .unit.Programming(v-bind:active="isProgramming")
+              .unit__panel(v-on:click="programmingClick()")
+                p.unit__name
+                  | Programming
+                img(src="/imgs/yajirusi.png" alt="yajirusi")
+              .unit__detail
+                p.
+                  主にWebサイトの設計や<br>
+                  プログラミングを行います。
+
+            .unit.Chief(v-bind:active="ischief")
+              .unit__panel(v-on:click="chiefClick()")
+                p.unit__name
+                  | Chief
+                img(src="/imgs/yajirusi.png" alt="yajirusi")
+              .unit__detail
+                p.
+                  千歳　慎<br>
+                  フリーランスのWebクリエイター<br>
+                  環境デザイン学科非常勤講師
 
           .container
             p.sibtitle
@@ -165,6 +185,9 @@ export default class TochioriPageComp extends Vue {
   // ディレクションがactiveかどうか
   // １で使ってる
   isDirection: boolean = false;
+  isDesigner: boolean = false;
+  isProgramming: boolean = false;
+  ischief: boolean = false;
 
   // ２のところ、ディレクションがクリックされたときに呼ばれる関数
   directionClick() {
@@ -178,6 +201,21 @@ export default class TochioriPageComp extends Vue {
     } else {
       this.isDirection = true;
     }*/
+  }
+
+  designerClick() {
+    console.log("designerClick");
+    this.isDesigner = !this.isDesigner;
+  }
+
+  programmingClick() {
+    console.log("programmingClick");
+    this.isProgramming = !this.isProgramming;
+  }
+
+  chiefClick() {
+    console.log("chiefClick");
+    this.ischief = !this.ischief;
   }
 }
 </script>
@@ -307,31 +345,22 @@ export default class TochioriPageComp extends Vue {
         }
       }
       .Designer {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 150px;
-        padding-bottom: 166px;
-        padding-left: 75px;
-        margin-right: 25px;
-        background-color: #e2c75b;
+        background-color: #e2cd78;
+        .unit__panel {
+          background-color: #e2c75b;
+        }
       }
       .Programming {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 150px;
-        padding-bottom: 166px;
-        padding-left: 75px;
-        margin-right: 25px;
-        background-color: #3a7883;
+        background-color: #5f8f98;
+        .unit__panel {
+          background-color: #3a7883;
+        }
       }
       .Chief {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 150px;
-        padding-bottom: 166px;
-        padding-left: 75px;
-        margin-right: 25px;
-        background-color: #a35252;
+        background-color: #b97070;
+        .unit__panel {
+          background-color: #a35252;
+        }
       }
       //add chitose
       .unit {
@@ -354,9 +383,9 @@ export default class TochioriPageComp extends Vue {
           z-index: 1;
           padding-left: 75px;
 
-          transition: all 3s ease-in-out 0s;
+          transition: all 0.4s ease-in-out 0s;
           img {
-            transition: all 3s ease-in-out 0s;
+            transition: all 0.4s ease-in-out 0s;
           }
         }
         &__detail {
@@ -374,26 +403,29 @@ export default class TochioriPageComp extends Vue {
         }
       }
     }
-    .sibtitle {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: bold;
-      font-size: 20pt;
-      padding-top: 127px;
-    }
-    .feature {
-      text-align: center;
-      img {
+    .container {
+      margin-left: 30px;
+      .sibtitle {
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: bold;
+        font-size: 20pt;
+        padding-top: 127px;
+      }
+      .feature {
         text-align: center;
-        height: 298px;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        margin-left: -60px;
+        img {
+          text-align: center;
+          height: 298px;
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
       }
     }
   }
 }
 
 .term {
-  margin-left: 30px;
   .main {
     padding-top: 127px;
     padding-bottom: 127px;
@@ -411,6 +443,7 @@ export default class TochioriPageComp extends Vue {
     }
   }
   .secondary {
+    margin-left: 30px;
     padding-top: 127px;
     padding-bottom: 127px;
     p:not(:last-child) {
