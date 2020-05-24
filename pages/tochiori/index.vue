@@ -42,99 +42,100 @@
               br
               | 受注も行うつもりです。
       section.activities
-        .bg
-          .main
-            .img
-              img.pc(src="/imgs/activities.png" alt="pc")
-              p
-                | 活動について
-            .container
-              .about
-                p.title
-                  | Labとしての活動
+        .catch
+          .bg
+            .main
+              .img
+                img.pc(src="/imgs/activities.png" alt="pc")
                 p
-                  | 本業がWebクリエイターを中心に
-                  br
-                  | 実際の現場と同じような進行と
-                  br
-                  | クリエイティビティを目指します。
-                  br
-                  | 第一線で活躍するプロのデザイナー、
-                  br
-                  | エンジニアを支えて
-                  br
-                  |「プロクオリティ」を前提とします。
+                  | 活動について
+              .container
+                .about
+                  p.title
+                    | Labとしての活動
+                  p
+                    | 本業がWebクリエイターを中心に
+                    br
+                    | 実際の現場と同じような進行と
+                    br
+                    | クリエイティビティを目指します。
+                    br
+                    | 第一線で活躍するプロのデザイナー、
+                    br
+                    | エンジニアを支えて
+                    br
+                    |「プロクオリティ」を前提とします。
+                  p
+                    | プロジェクトの進行方法としては、
+                    br
+                    | 主に3つのチームに分かれて進めていきます。
+              .box
+                //- １
+                //- v-bindは属性を値の変化に応じて反映する
+                //- isDirectionが
+                //- trueだったら、active="true"が付与される。
+                //- falseだったら、何も付与されない。
+                .unit.Direction(v-bind:active="isDirection")
+                  //- ２
+                  //- v-onは〇〇したら、指定の関数を実行する
+                  .unit__panel(v-on:click="directionClick()")
+                    p.unit__name
+                      | Direction
+                    img(src="/imgs/yajirusi.png" alt="yajirusi")
+                  .unit__detail
+                    p.
+                      主に企画・ミーティング運営、<br>
+                      スケジュール管理、<br>
+                      プロジェクト全体の<br>
+                      進行・管理を行います。
+
+
+                .unit.Designer(v-bind:active="isDesigner")
+                  .unit__panel(v-on:click="designerClick()")
+                    p.unit__name
+                      | Designer
+                    img(src="/imgs/yajirusi.png" alt="yajirusi")
+                  .unit__detail
+                    p.
+                      Webサイトのデザインや、<br>
+                      ロゴの制作などを行います。<br>
+                      Photoshopなどを<br>
+                      用いてデザインを作成します。
+
+                .unit.Programming(v-bind:active="isProgramming")
+                  .unit__panel(v-on:click="programmingClick()")
+                    p.unit__name
+                      | Programming
+                    img(src="/imgs/yajirusi.png" alt="yajirusi")
+                  .unit__detail
+                    p.
+                      主にWebサイトの設計や<br>
+                      プログラミングを行います。
+
+                .unit.Chief(v-bind:active="ischief")
+                  .unit__panel(v-on:click="chiefClick()")
+                    p.unit__name
+                      | Chief
+                    img(src="/imgs/yajirusi.png" alt="yajirusi")
+                  .unit__detail
+                    p.
+                      <span>千歳　慎</span><br>
+                      フリーランスのWebクリエイター<br>
+                      環境デザイン学科非常勤講師
+
+              .container
+                p.sibtitle
+                  | DPとしての活動
+                .feature
+                  img.festival(src="/imgs/background.png" alt="festival")
                 p
-                  | プロジェクトの進行方法としては、
+                  | 今回のDPではSWU ID Labの一環として
                   br
-                  | 主に3つのチームに分かれて進めていきます。
-            .box
-              //- １
-              //- v-bindは属性を値の変化に応じて反映する
-              //- isDirectionが
-              //- trueだったら、active="true"が付与される。
-              //- falseだったら、何も付与されない。
-              .unit.Direction(v-bind:active="isDirection")
-                //- ２
-                //- v-onは〇〇したら、指定の関数を実行する
-                .unit__panel(v-on:click="directionClick()")
-                  p.unit__name
-                    | Direction
-                  img(src="/imgs/yajirusi.png" alt="yajirusi")
-                .unit__detail
-                  p.
-                    主に企画・ミーティング運営、<br>
-                    スケジュール管理、<br>
-                    プロジェクト全体の<br>
-                    進行・管理を行います。
-
-
-              .unit.Designer(v-bind:active="isDesigner")
-                .unit__panel(v-on:click="designerClick()")
-                  p.unit__name
-                    | Designer
-                  img(src="/imgs/yajirusi.png" alt="yajirusi")
-                .unit__detail
-                  p.
-                    Webサイトのデザインや、<br>
-                    ロゴの制作などを行います。<br>
-                    Photoshopなどを<br>
-                    用いてデザインを作成します。
-
-              .unit.Programming(v-bind:active="isProgramming")
-                .unit__panel(v-on:click="programmingClick()")
-                  p.unit__name
-                    | Programming
-                  img(src="/imgs/yajirusi.png" alt="yajirusi")
-                .unit__detail
-                  p.
-                    主にWebサイトの設計や<br>
-                    プログラミングを行います。
-
-              .unit.Chief(v-bind:active="ischief")
-                .unit__panel(v-on:click="chiefClick()")
-                  p.unit__name
-                    | Chief
-                  img(src="/imgs/yajirusi.png" alt="yajirusi")
-                .unit__detail
-                  p.
-                    千歳　慎<br>
-                    フリーランスのWebクリエイター<br>
-                    環境デザイン学科非常勤講師
-
-            .container
-              p.sibtitle
-                | DPとしての活動
-              .feature
-                img.festival(src="/imgs/background.png" alt="festival")
-              p
-                | 今回のDPではSWU ID Labの一環として
-                br
-                | 2020年度秋桜祭のWebサイトを作成します。
-                br
-                | 企画からデザイン、コンテンツ制作、
-                br
-                | 広報までを学生を主体に計画・実施します。
+                  | 2020年度秋桜祭のWebサイトを作成します。
+                  br
+                  | 企画からデザイン、コンテンツ制作、
+                  br
+                  | 広報までを学生を主体に計画・実施します。
       section.term
         .main
           .img
@@ -288,9 +289,19 @@ export default class TochioriPageComp extends Vue {
 
 .activities {
   // margin-left: 30px;
+  .catch {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+  .catch.bg {
+    width: 100vw;
+    height: 100vh;
+  }
   .bg {
     background-image: url("/imgs/katudou.png");
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: top center;
     position: relative;
     z-index: 0;
   }
@@ -383,6 +394,9 @@ export default class TochioriPageComp extends Vue {
         background-color: #b97070;
         .unit__panel {
           background-color: #a35252;
+        }
+        span {
+          font-size: 20px;
         }
       }
       //add chitose
