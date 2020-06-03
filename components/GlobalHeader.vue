@@ -1,6 +1,7 @@
 <template lang="pug">
   header.global-header
-
+    .container
+      p ぐろーばるへっだー
 
 </template>
 
@@ -16,7 +17,14 @@
 </script>
 
 <style lang="scss">
-  .global-header{
+  .global-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zindex-on;
 
+    width: 100%;
+    height: 3rem;
+    background-color: red;
   }
 </style>

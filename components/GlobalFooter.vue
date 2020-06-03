@@ -1,6 +1,7 @@
 <template lang="pug">
   footer.global-footer
-
+    .container
+      small ©昭和女子大学 情報デザイン研究室
 
 </template>
 
@@ -16,7 +17,10 @@
 </script>
 
 <style lang="scss">
-  .global-footer{
-    
+  .global-footer {
+    background-color: $color-black;
+    color: $color-white;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 </style>
