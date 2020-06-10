@@ -26,7 +26,7 @@
               br
               | 主に、Webサイトの作成を行います。
             p
-              | このコミュニティは枠にとらわれない
+              | このコミュニティは枠に囚われない
               br
               | 自由な場です。学生と変なおじさんでできた、
               br
@@ -147,7 +147,7 @@
           p
             | Labとして、1つの目安として
             br
-            | 千歳がクビになるまで運営する予定でいます。
+            | 千歳がクビになるまで運営する予定でいまが、
             br
             | クビになってもLabが存続できるような体制を
             br
@@ -179,416 +179,417 @@
 </template>
 
 <script lang="ts">
-  import {Component} from "~/node_modules/vue-property-decorator";
-  import {Vue} from "~/node_modules/nuxt-property-decorator";
+import { Component } from "~/node_modules/vue-property-decorator";
+import { Vue } from "~/node_modules/nuxt-property-decorator";
 
-  @Component({
-    components: {}
-  })
-  export default class TochioriPageComp extends Vue {
-    // ディレクションがactiveかどうか
-    // １で使ってる
-    isDirection: boolean = false;
-    isDesigner: boolean = false;
-    isProgramming: boolean = false;
-    ischief: boolean = false;
+@Component({
+  components: {}
+})
+export default class TochioriPageComp extends Vue {
+  // ディレクションがactiveかどうか
+  // １で使ってる
+  isDirection: boolean = false;
+  isDesigner: boolean = false;
+  isProgramming: boolean = false;
+  ischief: boolean = false;
 
-    // ２のところ、ディレクションがクリックされたときに呼ばれる関数
-    directionClick() {
-      console.log("directionClick");
-      this.isDirection = !this.isDirection;
+  // ２のところ、ディレクションがクリックされたときに呼ばれる関数
+  directionClick() {
+    console.log("directionClick");
+    this.isDirection = !this.isDirection;
 
-      /*
+    /*
       上と同じ意味
       if (this.isDirection) {
         this.isDirection = false;
       } else {
         this.isDirection = true;
       }*/
-    }
-
-    designerClick() {
-      console.log("designerClick");
-      this.isDesigner = !this.isDesigner;
-    }
-
-    programmingClick() {
-      console.log("programmingClick");
-      this.isProgramming = !this.isProgramming;
-    }
-
-    chiefClick() {
-      console.log("chiefClick");
-      this.ischief = !this.ischief;
-    }
   }
+
+  designerClick() {
+    console.log("designerClick");
+    this.isDesigner = !this.isDesigner;
+  }
+
+  programmingClick() {
+    console.log("programmingClick");
+    this.isProgramming = !this.isProgramming;
+  }
+
+  chiefClick() {
+    console.log("chiefClick");
+    this.ischief = !this.ischief;
+  }
+}
 </script>
 
 <style lang="scss">
-  @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Noto+Sans+JP:wght@400;700&display=swap");
 
-  .tochi {
-    font-family: "M PLUS 1p", sans-serif;
+.tochi {
+  font-family: "M PLUS 1p", sans-serif;
 
-    .font-noto {
-      font-family: "Noto Sans JP", sans-serif;
-    }
+  .font-noto {
+    font-family: "Noto Sans JP", sans-serif;
+  }
+}
+
+.main-visual {
+  background-color: #deacac;
+  text-align: center;
+
+  header {
+    text-align: right;
+    padding-top: 25px;
+    margin-right: 25px;
+    position: sticky;
+    top: 0;
   }
 
-  .main-visual {
-    background-color: #deacac;
-    text-align: center;
-
-    header {
-      text-align: right;
-      padding-top: 25px;
-      margin-right: 25px;
-      position: sticky;
-      top: 0;
-    }
-
-    .logo {
-      padding-top: 16rem;
-      padding-bottom: 18rem;
-      width: 4rem;
-      height: auto;
-    }
+  .logo {
+    padding-top: 16rem;
+    padding-bottom: 18rem;
+    width: 4rem;
+    height: auto;
   }
+}
 
-  .about {
-    .main {
-      padding-top: 127px;
-      padding-bottom: 127px;
+.about {
+  .main {
+    padding-top: 127px;
+    padding-bottom: 127px;
 
-      .img {
-        text-align: center;
+    .img {
+      text-align: center;
 
-        .question {
-          width: 6rem;
-          height: auto;
-          margin: auto;
-        }
-
-        p {
-          font-size: 15pt;
-          font-family: "Noto Sans JP", sans-serif;
-          font-weight: bold;
-          color: #be5b5b;
-          margin: 15px;
-        }
-      }
-
-      .container {
-        .title {
-          font-size: 20px;
-          font-family: "Noto Sans JP", sans-serif;
-          font-weight: bold;
-          line-height: 1;
-          margin-top: 127px;
-          margin-bottom: 60px;
-        }
-
-        p {
-          margin-top: 60px;
-        }
-      }
-    }
-  }
-
-  .activities {
-    // margin-left: 30px;
-    /*.catch {*/
-    /*}*/
-
-    /*.catch.bg {*/
-    /*  width: 100vw;*/
-    /*  height: 100vh;*/
-    /*}*/
-
-    .bg {
-      position: sticky;
-      top: 0;
-      height: 0;
-      z-index: -1;
-
-      .catch {
-        width: 100vw;
-        height: 100vh;
-
-        .img {
-          object-fit: cover;
-          object-position: 70% 40%;
-          width: 100%;
-          height: 100%;
-        }
-      }
-    }
-
-    .bg::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: -1;
-    }
-
-    p {
-      color: #ffffff;
-    }
-
-    .title {
-      font-family: "Noto Sans JP", sans-serif;
-      font-weight: bold;
-      font-size: 27pt;
-    }
-
-    .main {
-      padding-top: 127px;
-      padding-bottom: 127px;
-
-      .img {
-        text-align: center;
-
-        .pc {
-          width: 100px;
-          height: auto;
-        }
-
-        p {
-          font-family: "Noto Sans JP", sans-serif;
-          margin: 15px;
-          font-size: 15pt;
-          font-weight: bold;
-        }
-      }
-
-      .container {
-        margin-left: 0px;
-        padding: 0px;
-      }
-
-      .about {
-        margin-top: 127px;
-        margin-bottom: 127px;
-
-        p {
-          margin-top: 60px;
-        }
-      }
-
-      .box {
-        padding-right: 7%;
-
-        .unit__name {
-          font-size: 20pt;
-          font-weight: bold;
-          padding: 0px;
-          margin: 0px;
-        }
-
-        img {
-          margin-top: 0px;
-          margin-bottom: 0px;
-          padding: 0px;
-          width: auto;
-          height: 15px;
-          margin-right: 20px;
-        }
-
-        .Direction {
-          // display: flex;
-          // justify-content: space-between;
-          // padding-top: 150px;
-          // padding-bottom: 166px;
-          // padding-left: 75px;
-          // margin-right: 25px;
-          background-color: #7b56a2;
-
-          .unit__panel {
-            background-color: #6a4d88;
-          }
-        }
-
-        .Designer {
-          background-color: #e2cd78;
-
-          .unit__panel {
-            background-color: #e2c75b;
-          }
-        }
-
-        .Programming {
-          background-color: #5f8f98;
-
-          .unit__panel {
-            background-color: #3a7883;
-          }
-        }
-
-        .Chief {
-          background-color: #b97070;
-
-          .unit__panel {
-            background-color: #a35252;
-          }
-
-          span {
-            font-size: 20px;
-          }
-        }
-
-        //add chitose
-        .unit {
-          position: relative;
-          height: 351px;
-
-          &__panel,
-          &__detail {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-          }
-
-          &__panel {
-            justify-content: space-between;
-            background-color: red;
-            z-index: 1;
-            padding-left: 75px;
-
-            transition: all 0.4s ease-in-out 0s;
-
-            img {
-              transition: all 0.4s ease-in-out 0s;
-            }
-          }
-
-          &__detail {
-            padding-left: 70px;
-          }
-
-          //from event
-          &[active="true"] {
-            .unit__panel {
-              transform: translateX(-90%);
-
-              img {
-                transform: rotate(180deg);
-                margin-right: 10px;
-              }
-            }
-          }
-        }
-      }
-
-      .container {
-        margin-left: 30px;
-
-        .sibtitle {
-          font-family: "Noto Sans JP", sans-serif;
-          font-weight: bold;
-          font-size: 20pt;
-          padding-top: 127px;
-        }
-
-        .feature {
-          text-align: center;
-          margin-left: -60px;
-
-          img {
-            text-align: center;
-            height: 298px;
-            padding-top: 60px;
-            padding-bottom: 60px;
-          }
-        }
-      }
-    }
-  }
-
-  .term {
-    .main {
-      padding-top: 127px;
-      padding-bottom: 127px;
-
-      .img {
-        text-align: center;
-
-        img {
-          margin-left: 0px;
-        }
+      .question {
+        width: 6rem;
+        height: auto;
+        margin: auto;
       }
 
       p {
-        font-family: "Noto Sans JP", sans-serif;
         font-size: 15pt;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: bold;
         color: #be5b5b;
         margin: 15px;
       }
     }
 
-    .secondary {
-      margin-left: 30px;
-      padding-top: 127px;
-      padding-bottom: 127px;
-
-      p:not(:last-child) {
-        padding-bottom: 60px;
-        margin-bottom: 0px;
+    .container {
+      .title {
+        font-size: 20px;
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 127px;
+        margin-bottom: 60px;
       }
 
-      span {
-        color: #be5b5b;
+      p {
+        margin-top: 60px;
+      }
+    }
+  }
+}
+
+.activities {
+  // margin-left: 30px;
+  /*.catch {*/
+  /*}*/
+
+  /*.catch.bg {*/
+  /*  width: 100vw;*/
+  /*  height: 100vh;*/
+  /*}*/
+
+  .bg {
+    position: sticky;
+    top: 0;
+    height: 0;
+    z-index: -1;
+
+    .catch {
+      width: 100vw;
+      height: 100vh;
+
+      .img {
+        object-fit: cover;
+        object-position: 70% 40%;
+        width: 100%;
+        height: 100%;
       }
     }
   }
 
-  .apply {
+  .bg::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+
+  p {
+    color: #ffffff;
+  }
+
+  .title {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: bold;
+    font-size: 27pt;
+  }
+
+  .main {
     padding-top: 127px;
     padding-bottom: 127px;
-    background-color: #deacac;
+
+    .img {
+      text-align: center;
+
+      .pc {
+        width: 100px;
+        height: auto;
+      }
+
+      p {
+        font-family: "Noto Sans JP", sans-serif;
+        margin: 15px;
+        font-size: 15pt;
+        font-weight: bold;
+      }
+    }
+
+    .container {
+      margin-left: 0px;
+      padding: 0px;
+    }
+
+    .about {
+      margin-top: 127px;
+      margin-bottom: 127px;
+
+      p {
+        margin-top: 60px;
+      }
+    }
+
+    .box {
+      padding-right: 7%;
+
+      .unit__name {
+        font-size: 20pt;
+        font-weight: bold;
+        padding: 0px;
+        margin: 0px;
+      }
+
+      img {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+        width: auto;
+        height: 15px;
+        margin-right: 20px;
+      }
+
+      .Direction {
+        // display: flex;
+        // justify-content: space-between;
+        // padding-top: 150px;
+        // padding-bottom: 166px;
+        // padding-left: 75px;
+        // margin-right: 25px;
+        background-color: #7b56a2;
+
+        .unit__panel {
+          background-color: #6a4d88;
+        }
+      }
+
+      .Designer {
+        background-color: #e2cd78;
+
+        .unit__panel {
+          background-color: #e2c75b;
+        }
+      }
+
+      .Programming {
+        background-color: #5f8f98;
+
+        .unit__panel {
+          background-color: #3a7883;
+        }
+      }
+
+      .Chief {
+        background-color: #b97070;
+
+        .unit__panel {
+          background-color: #a35252;
+        }
+
+        span {
+          font-size: 20px;
+        }
+      }
+
+      //add chitose
+      .unit {
+        position: relative;
+        height: 351px;
+
+        &__panel,
+        &__detail {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+
+        &__panel {
+          justify-content: space-between;
+          background-color: red;
+          z-index: 1;
+          padding-left: 75px;
+
+          transition: all 0.4s ease-in-out 0s;
+
+          img {
+            transition: all 0.4s ease-in-out 0s;
+          }
+        }
+
+        &__detail {
+          padding-left: 70px;
+        }
+
+        //from event
+        &[active="true"] {
+          .unit__panel {
+            transform: translateX(-90%);
+
+            img {
+              transform: rotate(180deg);
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      margin-left: 30px;
+
+      .sibtitle {
+        font-family: "Noto Sans JP", sans-serif;
+        font-weight: bold;
+        font-size: 20pt;
+        padding-top: 127px;
+      }
+
+      .feature {
+        text-align: center;
+        margin-left: -60px;
+
+        img {
+          text-align: center;
+          height: 298px;
+          padding-top: 60px;
+          padding-bottom: 60px;
+        }
+      }
+    }
+  }
+}
+
+.term {
+  background-color: white;
+  .main {
+    padding-top: 127px;
+    padding-bottom: 127px;
 
     .img {
       text-align: center;
 
       img {
-        padding: 0px;
-      }
-    }
-
-    .link {
-      padding-top: 60px;
-      padding-bottom: 60px;
-      text-align: center;
-      font-size: 15px;
-      color: white;
-    }
-
-    .form {
-      font-family: "Noto Sans JP", sans-serif;
-      font-size: 20px;
-      text-align: center;
-      margin-bottom: 127px;
-
-      button {
-        border: solid 3px #504e4e;
-        border-radius: 10px;
-        background: #504e4e;
-        color: white;
-        padding-right: 40px;
-        padding-left: 40px;
+        margin-left: 0px;
       }
     }
 
     p {
-      text-align: center;
-      padding-top: 31px;
+      font-family: "Noto Sans JP", sans-serif;
+      font-size: 15pt;
+      color: #be5b5b;
+      margin: 15px;
     }
   }
+
+  .secondary {
+    margin-left: 30px;
+    padding-bottom: 127px;
+
+    p:not(:last-child) {
+      padding-bottom: 60px;
+      margin-bottom: 0px;
+    }
+
+    span {
+      color: #be5b5b;
+    }
+  }
+}
+
+.apply {
+  padding-top: 127px;
+  padding-bottom: 127px;
+  background-color: #deacac;
+
+  .img {
+    text-align: center;
+
+    img {
+      padding: 0px;
+    }
+  }
+
+  .link {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+  }
+
+  .form {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 127px;
+
+    button {
+      border: solid 3px #504e4e;
+      border-radius: 10px;
+      background: #504e4e;
+      color: white;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+  }
+
+  p {
+    color: white;
+    text-align: center;
+    padding-top: 31px;
+  }
+}
 </style>
