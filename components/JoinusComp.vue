@@ -1,7 +1,8 @@
 <template lang="pug">
-  .joinus
+  section.joinus
     .container
-      img(src="/imgs/Join us..png" alt="joinus")
+      .title
+        img(src="/imgs/title-join-us.svg" alt="join us")
       p
         | 自分の好きなことを活かせそう...という人と一緒に
         br
@@ -27,34 +28,38 @@
         br
         | 募集します。
     .submit
-        a.button(href="#",target="_blank")
-          | メンバー紹介ページ
+      a.button(href="#",target="_blank")
+        | メンバー紹介ページ
 
 </template>
 
 <script lang="ts">
-import { Component } from "~/node_modules/vue-property-decorator";
-import { Vue } from "~/node_modules/nuxt-property-decorator";
+  import {Component} from "~/node_modules/vue-property-decorator";
+  import {Vue} from "~/node_modules/nuxt-property-decorator";
 
-@Component({
-  components: {}
-})
-export default class JoinusComp extends Vue {}
+  @Component({
+    components: {}
+  })
+  export default class JoinusComp extends Vue {
+  }
 </script>
 
 <style lang="scss">
-.joinus {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  img {
-    margin-bottom: 2.5rem;
+  .joinus {
+    /*padding-top: 5rem;*/
+    /*padding-bottom: 5rem;*/
+    /**/
+    /*img {*/
+    /*  margin-bottom: 2.5rem;*/
+    /*}*/
+
+    p {
+      margin-top: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .submit {
+      text-align: center;
+    }
   }
-  p {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-  .submit {
-    text-align: center;
-  }
-}
 </style>

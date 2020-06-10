@@ -1,7 +1,7 @@
 <template lang="pug">
-  .dp
+  section.dp
     .container
-      .header
+      h3.title
         img(src="/imgs/title-dp.svg")
         p
           | DP生参加募集
@@ -32,45 +32,48 @@
 </template>
 
 <script lang="ts">
-import { Component } from "~/node_modules/vue-property-decorator";
-import { Vue } from "~/node_modules/nuxt-property-decorator";
+  import {Component} from "~/node_modules/vue-property-decorator";
+  import {Vue} from "~/node_modules/nuxt-property-decorator";
 
-@Component({
-  components: {}
-})
-export default class DpComp extends Vue {}
+  @Component({
+    components: {}
+  })
+  export default class DpComp extends Vue {
+  }
 </script>
 
 <style lang="scss">
-.dp {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  background-color: #d84d4d;
-  p {
-    color: white;
-  }
-  .header {
-    text-align: center;
-    img {
-      width: 85px;
-      height: auto;
-      color: white;
+  .dp {
+    background-color: #d84d4d;
+
+    color: $color-white;
+
+    .title {
+      text-align: center;
+
+      img {
+        filter: invert(1);
+      }
+
+      p {
+        font-size: 20px;
+        @include font-weight-normal;
+      }
     }
-    p {
-      font-size: 20px;
+
+    .main {
+      p {
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .avatar {
+        text-align: center;
+      }
     }
-  }
-  .main {
-    p {
-      margin-top: 2.5rem;
-      margin-bottom: 2.5rem;
-    }
-    .avatar {
+
+    .submit {
       text-align: center;
     }
   }
-  .submit {
-    text-align: center;
-  }
-}
 </style>
