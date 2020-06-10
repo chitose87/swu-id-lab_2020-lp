@@ -1,7 +1,7 @@
 <template lang="pug">
   .lab
     section.main-visual
-      img.logo(src="/imgs/logo.svg" alt="logo")
+      img.logo(src="/imgs/65.png" alt="logo")
       h1.title
         img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
 
@@ -35,7 +35,7 @@
         .catch
           img.img(src="/imgs/lab-bg.jpg" alt="lab")
       .head
-        h3.title
+        .title
           img(src="/imgs/Unit.png" alt="Unit")
 
       .body

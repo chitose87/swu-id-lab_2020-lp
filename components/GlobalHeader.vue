@@ -1,7 +1,7 @@
 <template lang="pug">
   header.global-header
     .container
-      img.logo(src="/imgs/logo.svg" alt="logo")
+      img.logo(src="/imgs/logo_only.png" alt="logo")
       p About
       p PROJECTS
       p JoinUs.
@@ -33,16 +33,18 @@ export default class GlobalHeader extends Vue {}
   .container {
     height: 48px;
     display: flex;
+    padding-top: 5px;
     padding-left: 8px;
     padding-right: 0px;
     p {
       margin: 7px;
-      padding-top: 3px;
+
       color: #707070;
     }
     img {
-      width: 37px;
-      height: auto;
+      margin: 7px;
+      width: 26px;
+      height: 23px;
       padding-right: 5px;
     }
   }
