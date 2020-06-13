@@ -25,7 +25,11 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/types"
+      "@nuxt/types",
+      //"gapi.client.drive",
+      "gapi.client.sheets",
+      "gapi.auth2",
+      "gapi"
     ],
     "experimentalDecorators": true
   },
