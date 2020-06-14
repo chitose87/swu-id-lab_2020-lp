@@ -1,7 +1,7 @@
 <template lang="pug">
   .lab
     section.main-visual
-      img.logo(src="/imgs/65.png" alt="logo")
+      img.logo(src="/imgs/logo.svg" alt="logo")
       h1.title
         img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
 
@@ -115,7 +115,7 @@
       */
     .main-visual {
       background-color: $color-blue;
-      height: 500px;
+      height: 100vh;
       display: flex;
       flex-direction: column;
 
