@@ -3,6 +3,14 @@
     GlobalHeader
     main
       .container
+
+        h2.title 工事中
+
+        //created()の一連の処理でspreadSheetDataに行データが入ってくる
+        //v-forは行の数だけ.memberを繰り返し作ってくれる「文法」 https://jp.vuejs.org/v2/guide/list.html
+          //＊itemsに一行分のデータが入ってて参照できる
+            //items[0]　１列目
+            //items[1]　２列目
         .member(v-for="items in spreadSheetData")
           p.member__item.name
             span(v-html="items[0]")
@@ -23,6 +31,7 @@
           p.member__item.will
             span やりたいこと：
             span(v-html="items[6]")
+          //v-ifは「値があったら」という意味で、式がfalseになったら表示されない
           p.member__item.face(v-if="items[7]")
             img(:src="getPath(items[7])")
 
@@ -49,20 +58,24 @@
       return {
         // title: 'My Site',
         script: [
+          //googleのAPI(Application Programming Interface)が使えるツールを読み込み
           {src: 'https://apis.google.com/js/api.js'},
         ]
       }
     }
 
     getPath(url: string) {
-      // url.match(/\/d\/([^\/]+)/)[1]
-      // console.log(url, url.match(/\/d\/([^\/]+)/))
+      //driveのURLから、画像のIDだけを抽出してハメてる（正規表現ってテクニック）
       return `https://drive.google.com/uc?id=${url.match(/\/d\/([^\/]+)/)![1]}`;
     }
 
     created() {
       try {
+        //gapiは、Google apiの略。この中にスプレッドシートと連携するためのものが入ってる
+
+        //認証ツールをloadする
         gapi.load('client:auth2', () => {
+          //google cloud platformで登録したユーザー鍵を使って初期化
           gapi.client.init({
             apiKey: "AIzaSyAO4hoO627ZHxBqjz4Uet7M5kscJLe8j-M",
             clientId: "90996999377-5ipd5pojr42ahatuhefgcmc7ijs4rtph.apps.googleusercontent.com",
@@ -71,30 +84,52 @@
             ],
             scope: "https://www.googleapis.com/auth/spreadsheets.readonly"
           }).then(() => {
+            //鍵が通ったらココが実行される
+
+            //gapiのclient関連のシート機能のスプレッドシートの値をgetする関数を実行
+            //https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/get
             gapi.client.sheets.spreadsheets.values.get({
+              //対象のスプレッドシートのID
               spreadsheetId: "1WQBhlnMZJO1OwpU_VkXz2_24Uj4Aex7O3gpOCKwaZzA",
+              //対象範囲（profile!A1:Z1とかだとセルの範囲がとれる）
               range: "profile",
+              //下記は、日付とかをどういう形式にするかっていう設定
               valueRenderOption: 'UNFORMATTED_VALUE',
-              // dateTimeRenderOption: 'SERIAL_NUMBER',
               dateTimeRenderOption: 'FORMATTED_STRING',
             }).then((response) => {
+              //通信が成功したらここ
               console.log(response.result);
 
-              response.result.values!.shift();
+
+              //ここからgetできたデータをイジったり、使いやすくしてる
+
+              //シートの中の”行たち”が入ってる部分をarrayに代入（response.result.valuesだと長くて使いにくいから）
               let array = <any[]>response.result.values;
+              //最初の行は見出しだから削除
+              array.shift();
+
+              //arrayの中をシャッフル（下記サイトのを参考にした）
+              //https://qiita.com/komaji504/items/62a0f8ea43053e90555a#fisheryates%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0%E3%82%92%E7%94%A8%E3%81%84%E3%82%8B%E6%96%B9%E6%B3%95
               for (let i = array.length - 1; i > 0; i--) {
                 let r = Math.floor(Math.random() * (i + 1));
                 let tmp = array[i];
                 array[i] = array[r];
                 array[r] = tmp;
               }
+
+              //シャッフルしたarrayをspreadSheetDataの入れ物に移す
+              //普通だったら、this.spreadSheetData=array;でいいんだけど諸事情により。。(参照渡しの都合)
               array.forEach((v) => {
                 this.spreadSheetData.push(v);
               });
+
+              //以上、あとは、vue.jsがよしなに表示してくれる。
             }, (e: Error) => {
+              //なぜかエラーがでたらここ
               console.log(e);
             });
           }, (error: any) => {
+            //鍵が通らなかったり、なんか問題あったらここ
             console.log(error);
           });
         });

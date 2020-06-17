@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.joinus
+  section.joinus#joinus
     .container
       .title
         img(src="/imgs/title-join-us.svg" alt="join us")
@@ -28,7 +28,7 @@
         br
         | 募集します。
     .submit
-      a.button(href="#",target="_blank")
+      a.button(href="/member/",target="_blank")
         | メンバー紹介ページ
 
 </template>

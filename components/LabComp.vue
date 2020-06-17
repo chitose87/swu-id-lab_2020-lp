@@ -5,7 +5,7 @@
       h1.title
         img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
 
-    section.about
+    section.about#about
       .container
         p
           | 昭和女子大学 情報デザイン研究室では主に、
