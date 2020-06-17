@@ -1,5 +1,5 @@
 <template lang="pug">
-  section.projects
+  section.projects#project
     .container
       h3.title
         img(src="/imgs/title-project.svg" alt="PROJECTS")
@@ -36,7 +36,7 @@
             br
             | どんなプロジェクトでも参加可能のお祭りです！
           .insert
-            img(src="/imgs/festival.png" alt="festival")
+            img(src="/imgs/dp-insert.jpg" alt="festival")
           p
             | 私たち学生が発表する機会といえば
             br
@@ -52,10 +52,10 @@
             br
             | そんな"誰か"からの基準は関係ありません。
         .footer
-          a.button(href="#",target="_blank")
+          .button(target="_blank" style="filter: grayscale(0.8);")
             | PROJECT FESサイト
           p
-            | Coming Soon
+            | - 2020年9月 公開予定 -
 
       .project.next
         img(src="/imgs/next.png" alt="next")
