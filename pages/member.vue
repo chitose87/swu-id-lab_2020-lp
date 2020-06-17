@@ -2,7 +2,22 @@
   div
     GlobalHeader
     main
+      .bg
+        .catch
+          img.img(src="/imgs/lab-bg.jpg" alt="lab")
       .container
+        .head
+          img(src="/imgs/Members.png" alt="Members")
+          p.title
+            | メンバー紹介
+          p.summary
+            | 基本的に、ゆるく、やりたいことを
+            br
+            | やっている人たちです。
+            br
+            | それぞれの個性溢れる紹介を
+            br
+            | ご覧ください。
         .member(v-for="items in spreadSheetData")
           p.member__item.name
             span(v-html="items[0]")
@@ -106,6 +121,30 @@
 </script>
 
 <style lang="scss">
+  .bg{
+    position: sticky;
+    top: 0;
+    height: 0;
+    z-index: -1;
+    .catch {
+      .img {
+        object-fit: cover;
+        object-position: 70% 40%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+.container{
+  .head{
+    text-align: center;
+    p{
+      color: white;
+    }
+    .title{
+      font-size: 22px;
+    }
+  }
   .member {
     border: 1px solid $color-border;
     padding: 1rem;
@@ -122,4 +161,5 @@
       }
     }
   }
+}
 </style>
