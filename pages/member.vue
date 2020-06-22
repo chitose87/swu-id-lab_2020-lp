@@ -2,11 +2,11 @@
   div
     GlobalHeader
     main
-      .bg
-        .catch
-          img.img(src="/imgs/lab-bg.jpg" alt="lab")
+      section
+        .bg
+          .catch
+            img.img(src="/imgs/bg.png" alt="lab")
       .container
-<<<<<<< HEAD
         .head
           img(src="/imgs/Members.png" alt="Members")
           p.title
@@ -19,8 +19,6 @@
             | それぞれの個性溢れる紹介を
             br
             | ご覧ください。
-=======
-
         h2.title 工事中
 
         //created()の一連の処理でspreadSheetDataに行データが入ってくる
@@ -28,7 +26,6 @@
           //＊itemsに一行分のデータが入ってて参照できる
             //items[0]　１列目
             //items[1]　２列目
->>>>>>> 7b8f34a3af91f06969096b26e8cb8ebc7c040621
         .member(v-for="items in spreadSheetData")
           p.member__item.name
             span(v-html="items[0]")
@@ -159,6 +156,9 @@
 </script>
 
 <style lang="scss">
+section{
+  padding-top: 0;
+  padding-bottom: 0;
   .bg{
     position: sticky;
     top: 0;
@@ -173,6 +173,8 @@
       }
     }
   }
+}
+
 .container{
   .head{
     text-align: center;
@@ -184,6 +186,7 @@
     }
   }
   .member {
+    background-color: white;
     border: 1px solid $color-border;
     padding: 1rem;
     margin-bottom: 3rem;
