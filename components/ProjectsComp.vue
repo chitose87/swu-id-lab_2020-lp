@@ -1,16 +1,16 @@
 <template lang="pug">
   section.projects#project
     .container
-      h3.title
+      //h3.title
         img(src="/imgs/title-project.svg" alt="PROJECTS")
 
       .project.fes
-        //.head
+        .head
           img(src="/imgs/SWUPROJECTFES.png" alt="fes")
 
         .main
           p
-            | PROJECTS FES(非公式)とは
+            | PROJECTS FESとは
             br
             | 昭和女子大学生が行うプロジェクトをアピールし、
             br
@@ -44,7 +44,7 @@
             br
             | 卒業制作優秀者など、限られた場だけです。
           p
-            | PROJECT FES(非公式)には
+            | PROJECT FESには
             br
             | 大人から見て優秀かどうか、
             br
@@ -60,7 +60,7 @@
           a.button(href="https://note.com/soy_99/n/n6c961a3c40fa?magazine_key=m9db5e7f8b5b1" target="_blank")
             | 事前応募開始のお知らせ
 
-      .project.next
+      //.project.next
         img(src="/imgs/next.png" alt="next")
 
 

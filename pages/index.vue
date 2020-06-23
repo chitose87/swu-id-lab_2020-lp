@@ -1,12 +1,12 @@
 <template lang="pug">
   div
-    GlobalHeader
+    //GlobalHeader
     main
-      LabComp
+      //LabComp
       ProjectsComp
-      JoinusComp
+      //JoinusComp
       DpComp
-      AnotherComp
+      //AnotherComp
 
     GlobalFooter
 

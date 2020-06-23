@@ -1,7 +1,7 @@
 <template lang="pug">
   footer.global-footer
     .container
-      small ©昭和女子大学 情報デザイン探究会(非公式)
+      small ©SWU PROJECT FES
 
 </template>
 
