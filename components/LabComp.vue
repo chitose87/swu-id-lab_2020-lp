@@ -2,17 +2,19 @@
   .lab
     section.main-visual
       img.logo(src="/imgs/logo.svg" alt="logo")
-      h1.title
-        img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
+      h1.title(style="color:#ffffff")
+        | 情報デザイン探究会(非公式)
+        //img(src="/imgs/logo-jp.svg" alt="環境デザイン探究会/Information Design Laborayory")
 
     section.about#about
       .container
         p
-          | 昭和女子大学 情報デザイン研究室では主に、
+          | 昭和女子大学 情報デザイン探究会(非公式)では主に、
           br
           | Webサイトの企画・作成を行います。
         p
-          | 本業がWebクリエイターの千歳を中心に
+          | 昭和女子大学の環境デザイン学科の学生の有志を中心に、
+          //| 本業がWebクリエイターの千歳がサポートをし、
           br
           | 実際の現場と同じような進行と
           br
@@ -71,15 +73,15 @@
     section.community
       .container
         .layout
-          .producer
+          //.producer
             h3.title
               img(src="/imgs/title-producer.svg" alt="Producer")
             p.profile
               | 千歳 慎
               br
               | Interactive Designer
-              br
-              | 環境デザイン学科 非常勤講師
+              //br
+              //| 環境デザイン学科 非常勤講師
 
 
           .message
@@ -88,7 +90,7 @@
             p
               | ゆるいけど、実際の現場と同じような進行方法で
               br
-              | 進んでいく学生とおじさんの集まりです。
+              | 進んでいく学生の集まりです。
               br
               | 明確なコンセプトはありません。
 

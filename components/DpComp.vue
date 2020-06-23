@@ -1,16 +1,16 @@
 <template lang="pug">
   section.dp#dp
     .container
-      h3.title
+      //h3.title
         img(src="/imgs/title-dp.svg")
         p
           | DP生参加募集
       .main
-        p
+        //p
           | 2020年度DP枠でも募集してます。
           br
           | 主に、2020PROJECT FESについての活動を予定しています。
-        p
+        //p
           | ※DP単位取得には2021年4月までに、15回以上のMTG出席が必要です。
 
         p
@@ -20,13 +20,13 @@
           br
           | 土曜日15:00～　作業日
 
-        p
+        //p
           | 担当教授
           br
           | 環境デザイン　藤澤忠盛
         //.avatar
           img(src="/imgs/img.png" alt="img")
-        p
+        //p
           | 連絡先:千歳 慎
           br
           | Mail:chitose87@gmail.com

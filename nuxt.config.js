@@ -10,7 +10,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'swu-id-lab_2020-lp',
+    title: 'ID Lab:昭和女子大学情報デザイン探究会（非公式）',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},

@@ -5,12 +5,12 @@
         img(src="/imgs/title-project.svg" alt="PROJECTS")
 
       .project.fes
-        .head
+        //.head
           img(src="/imgs/SWUPROJECTFES.png" alt="fes")
 
         .main
           p
-            | SWU PROJECTS FESとは
+            | PROJECTS FES(非公式)とは
             br
             | 昭和女子大学生が行うプロジェクトをアピールし、
             br
@@ -35,7 +35,7 @@
             | 学生が主体となって能動的に活動しているものなら、
             br
             | どんなプロジェクトでも参加可能のお祭りです！
-          .insert
+          //.insert
             img(src="/imgs/dp-insert.jpg" alt="festival")
           p
             | 私たち学生が発表する機会といえば
@@ -44,7 +44,7 @@
             br
             | 卒業制作優秀者など、限られた場だけです。
           p
-            | SWU PROJECT FESには
+            | PROJECT FES(非公式)には
             br
             | 大人から見て優秀かどうか、
             br
@@ -56,6 +56,9 @@
             | PROJECT FESサイト
           p
             | - 2020年9月 公開予定 -
+
+          a.button(href="https://note.com/soy_99/n/n6c961a3c40fa?magazine_key=m9db5e7f8b5b1" target="_blank")
+            | 事前応募開始のお知らせ
 
       .project.next
         img(src="/imgs/next.png" alt="next")
