@@ -2,8 +2,23 @@
   div
     GlobalHeader
     main
+      section
+        .bg
+          .catch
+            img.img(src="/imgs/bg.png" alt="lab")
       .container
-
+        .head
+          img(src="/imgs/Members.png" alt="Members")
+          p.title
+            | メンバー紹介
+          p.summary
+            | 基本的に、ゆるく、やりたいことを
+            br
+            | やっている人たちです。
+            br
+            | それぞれの個性溢れる紹介を
+            br
+            | ご覧ください。
         h2.title 工事中
 
         //created()の一連の処理でspreadSheetDataに行データが入ってくる
@@ -141,7 +156,37 @@
 </script>
 
 <style lang="scss">
+section{
+  padding-top: 0;
+  padding-bottom: 0;
+  .bg{
+    position: sticky;
+    top: 0;
+    height: 0;
+    z-index: -1;
+    .catch {
+      .img {
+        object-fit: cover;
+        object-position: 70% 40%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.container{
+  .head{
+    text-align: center;
+    p{
+      color: white;
+    }
+    .title{
+      font-size: 22px;
+    }
+  }
   .member {
+    background-color: white;
     border: 1px solid $color-border;
     padding: 1rem;
     margin-bottom: 3rem;
@@ -157,4 +202,5 @@
       }
     }
   }
+}
 </style>
