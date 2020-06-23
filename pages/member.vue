@@ -2,30 +2,29 @@
   div
     GlobalHeader
     main
-      section
-        .bg
-          .catch
-            img.img(src="/imgs/bg.png" alt="lab")
-      .container
+      .bg
+        .catch
+          img.img(src="/imgs/bg.png" alt="lab")
+      .body
         .head
-          img(src="/imgs/Members.png" alt="Members")
-          p.title
-            | メンバー紹介
-          p.summary
-            | 基本的に、ゆるく、やりたいことを
-            br
-            | やっている人たちです。
-            br
-            | それぞれの個性溢れる紹介を
-            br
-            | ご覧ください。
-        h2.title 工事中
+            img(src="/imgs/Members.png" alt="Members")
+        p.title
+          | メンバー紹介
+        p.summary
+          | 基本的に、ゆるく、やりたいことを
+          br
+          | やっている人たちです。
+          br
+          | それぞれの個性溢れる紹介を
+          br
+          | ご覧ください。
 
         //created()の一連の処理でspreadSheetDataに行データが入ってくる
         //v-forは行の数だけ.memberを繰り返し作ってくれる「文法」 https://jp.vuejs.org/v2/guide/list.html
           //＊itemsに一行分のデータが入ってて参照できる
             //items[0]　１列目
             //items[1]　２列目
+      .container
         .member(v-for="items in spreadSheetData")
           p.member__item.name
             span(v-html="items[0]")
@@ -156,35 +155,38 @@
 </script>
 
 <style lang="scss">
-section{
-  padding-top: 0;
-  padding-bottom: 0;
-  .bg{
-    position: sticky;
-    top: 0;
-    height: 0;
-    z-index: -1;
+.bg {
+  position: sticky;
+  top: 0;
+  height: 0;
+  z-index: -1;
     .catch {
       .img {
-        object-fit: cover;
-        object-position: 70% 40%;
-        width: 100%;
-        height: 100%;
+        position: relative;
+        right: 450px;
+        width: auto;
+        height: 740px;
       }
     }
+}
+.body{
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+  p{
+    color: white;
+  }
+  .title{
+    padding-bottom: 2.5rem;
+    font-size: 22px;
+  }
+  .summary{
+    padding-bottom: 10rem;
   }
 }
-
-.container{
-  .head{
-    text-align: center;
-    p{
-      color: white;
-    }
-    .title{
-      font-size: 22px;
-    }
-  }
   .member {
     background-color: white;
     border: 1px solid $color-border;
@@ -202,5 +204,4 @@ section{
       }
     }
   }
-}
 </style>
