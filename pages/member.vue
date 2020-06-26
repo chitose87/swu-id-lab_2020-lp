@@ -2,12 +2,15 @@
   div
     GlobalHeader
     main
+    section.member
       .bg
         .catch
           img.img(src="/imgs/bg.png" alt="lab")
+      .head
+        .title
+          img(src="/imgs/Members.png" alt="Members")
       .body
-        .head
-            img(src="/imgs/Members.png" alt="Members")
+
         p.title
           | メンバー紹介
         p.summary
@@ -155,7 +158,11 @@
 </script>
 
 <style lang="scss">
+.member{
+  padding-top: 0;
+      padding-bottom: 0;
 .bg {
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 0;
@@ -169,13 +176,18 @@
       }
     }
 }
-.body{
-  text-align: center;
+.head{
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.6),
     rgba(0, 0, 0, 0)
   );
+  .title{
+    text-align: center;
+  }
+}
+.body{
+  text-align: center;
   p{
     color: white;
   }
@@ -204,4 +216,5 @@
       }
     }
   }
+}
 </style>
