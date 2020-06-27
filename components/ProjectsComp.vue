@@ -35,7 +35,8 @@
             | 学生が主体となって能動的に活動しているものなら、
             br
             | どんなプロジェクトでも参加可能のお祭りです！
-          .insert
+
+          //.insert
             img(src="/imgs/dp-insert.jpg" alt="festival")
           p
             | 私たち学生が発表する機会といえば
