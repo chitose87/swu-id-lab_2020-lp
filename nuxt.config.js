@@ -14,7 +14,8 @@ export default {
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
-      {hid: 'description', name: 'description', content: ''}
+      {hid: 'description', name: 'description', content: ''},
+      {"http-equiv": "refresh", content: "0;URL='https://sw-id-lab.web.app/'"}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: '/swu-id-lab_2020-lp/favicon.ico'}
