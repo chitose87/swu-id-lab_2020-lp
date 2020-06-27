@@ -8,7 +8,7 @@
     section.about#about
       .container
         p
-          | 昭和女子大学 情報デザイン研究室では主に、
+          | 情報デザイン研究室では主に、
           br
           | Webサイトの企画・作成を行います。
         p
@@ -44,7 +44,7 @@
             h4.title Director
             .content
               .img
-                img(src="/imgs/team-director.png")
+                img(src="/imgs/unit-director.svg")
               p
                 | 主に企画・ミーティング運営、
                 br
@@ -55,14 +55,14 @@
             h4.title Designer
             .content
               .img
-                img(src="/imgs/team-designer.png")
+                img(src="/imgs/unit-designer.svg")
               p
                 | Webサイトのデザインや、ロゴの作成などを行います。
           .group.engineer
             h4.title Engineer
             .content
               .img
-                img(src="/imgs/team-engineer.png")
+                img(src="/imgs/unit-engineer.svg")
               p
                 | 主にWebサイトの設計や
                 br
@@ -78,8 +78,6 @@
               | 千歳 慎
               br
               | Interactive Designer
-              br
-              | 環境デザイン学科 非常勤講師
 
 
           .message

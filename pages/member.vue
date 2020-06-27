@@ -5,11 +5,11 @@
     section.member
       .bg
         .catch
-          img.img(src="/imgs/bg.png" alt="lab")
+          img.img(src="/imgs/bg-member.svg" alt="bd-member")
       .head
         .title
-          img(src="/imgs/Members.png" alt="Members")
-      .body
+          img(src="/imgs/title-member.svg" alt="Members")
+
 
         p.title
           | メンバー紹介
@@ -22,11 +22,11 @@
           br
           | ご覧ください。
 
-        //created()の一連の処理でspreadSheetDataに行データが入ってくる
-        //v-forは行の数だけ.memberを繰り返し作ってくれる「文法」 https://jp.vuejs.org/v2/guide/list.html
-          //＊itemsに一行分のデータが入ってて参照できる
-            //items[0]　１列目
-            //items[1]　２列目
+          //created()の一連の処理でspreadSheetDataに行データが入ってくる
+          //v-forは行の数だけ.memberを繰り返し作ってくれる「文法」 https://jp.vuejs.org/v2/guide/list.html
+            //＊itemsに一行分のデータが入ってて参照できる
+              //items[0]　１列目
+              //items[1]　２列目
       .container
         .member(v-for="items in spreadSheetData")
           p.member__item.name
@@ -169,12 +169,24 @@
   z-index: -1;
     .catch {
       .img {
-        position: relative;
-        right: 450px;
-        width: auto;
-        height: 740px;
+        object-fit: cover;
+        object-position: 70% 40%;
+        width: 100%;
+        height: 100%;
       }
     }
+    @include mediaquery-not-sm {
+          .catch {
+            width: 100%;
+            height: 750px;
+          }
+        }
+        @include mediaquery-sm {
+          .catch {
+            width: 100vw;
+            height: 100vh;
+          }
+        }
 }
 .head{
   background: linear-gradient(
@@ -184,9 +196,11 @@
   );
   .title{
     text-align: center;
+    img{
+      height: auto;
+    }
   }
-}
-.body{
+
   text-align: center;
   p{
     color: white;

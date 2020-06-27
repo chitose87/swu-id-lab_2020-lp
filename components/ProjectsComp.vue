@@ -6,11 +6,11 @@
 
       .project.fes
         .head
-          img(src="/imgs/SWUPROJECTFES.png" alt="fes")
+          img(src="/imgs/title-fes.svg" alt="fes")
 
         .main
           p
-            | SWU PROJECTS FESとは
+            | PROJECTS FESとは
             br
             | 昭和女子大学生が行うプロジェクトをアピールし、
             br
@@ -28,9 +28,9 @@
             br
             | 大学内だけでしか共有されていないプロジェクト、
             br
-            | 知られてないけど、とっても魅力的なプロジェクトなど
+            | 知られてないけど、とっても魅力的なプロジェクト
             br
-            | 様々な活動を応援します。
+            | など様々な活動を応援します。
           p
             | 学生が主体となって能動的に活動しているものなら、
             br
@@ -58,7 +58,7 @@
             | - 2020年9月 公開予定 -
 
       .project.next
-        img(src="/imgs/next.png" alt="next")
+        img(src="/imgs/next.svg" alt="next")
 
 
 </template>

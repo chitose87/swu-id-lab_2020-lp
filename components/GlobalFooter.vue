@@ -1,7 +1,7 @@
 <template lang="pug">
   footer.global-footer
     .container
-      small ©昭和女子大学 情報デザイン研究室
+      small ©情報デザイン研究室
 
 </template>
 
