@@ -3,7 +3,7 @@
     section.main-visual
       img.logo(src="/imgs/logo.svg" alt="logo")
       h1.title
-        img(src="/imgs/logo-jp.svg" alt="環境デザイン研究室/Information Design Laborayory")
+        img(src="/imgs/logo-jp.svg" alt="情報デザイン研究室/Information Design Laborayory")
 
     section.about#about
       .container
@@ -81,7 +81,6 @@
               | 千歳 慎
               br
               | Interactive Designer
-
 
           .message
             p
@@ -251,14 +250,17 @@
           @include mediaquery-not-sm {
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap;
           }
           @include mediaquery-sm {
             padding-left: 1rem;
             padding-right: 1rem;
           }
-          .submit{
+
+          .submit {
+            width: 100%;
             text-align: center;
-            padding-top: 5rem;
+            margin-top: 3rem;
           }
         }
 

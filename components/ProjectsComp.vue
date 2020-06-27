@@ -45,7 +45,7 @@
             br
             | 卒業制作優秀者など、限られた場だけです。
           p
-            | SWU PROJECT FESには
+            | PROJECT FESには
             br
             | 大人から見て優秀かどうか、
             br
@@ -57,6 +57,9 @@
             | PROJECT FESサイト
           p
             | - 2020年9月 公開予定 -
+
+          a.button(href="https://note.com/soy_99/n/n6c961a3c40fa?magazine_key=m9db5e7f8b5b1" target="_blank")
+            | 事前応募開始のお知らせ
 
       .project.next
         img(src="/imgs/next.svg" alt="next")
