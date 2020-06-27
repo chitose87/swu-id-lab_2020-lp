@@ -1,7 +1,7 @@
 <template lang="pug">
   footer.global-footer
     .container
-      small ©SWU PROJECT FES
+      small ©PROJECT FES
 
 </template>
 

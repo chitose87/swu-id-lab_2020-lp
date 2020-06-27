@@ -5,8 +5,8 @@
         img(src="/imgs/title-project.svg" alt="PROJECTS")
 
       .project.fes
-        .head
-          img(src="/imgs/SWUPROJECTFES.png" alt="fes")
+        //.head
+          //img(src="/imgs/SWUPROJECTFES.png" alt="fes")
 
         .main
           p
@@ -52,17 +52,21 @@
             br
             | そんな"誰か"からの基準は関係ありません。
         .footer
-          //.button(target="_blank" style="filter: grayscale(0.8);")
+          .button(target="_blank" style="filter: grayscale(0.8);")
             | PROJECT FESサイト
-          //p
+          p
             | - 2020年9月 公開予定 -
 
-          a.button(href="https://note.com/soy_99/n/n6c961a3c40fa?magazine_key=m9db5e7f8b5b1" target="_blank")
-            | 事前応募開始のお知らせ
+          p
+            a.button(href="https://note.com/soy_99/n/n6c961a3c40fa?magazine_key=m9db5e7f8b5b1" target="_blank")
+              | 事前応募開始のお知らせ
+
+          p
+            a.button(href="https://sw-id-lab.web.app")
+              | ID Labサイト
 
       //.project.next
         img(src="/imgs/next.png" alt="next")
-
 
 </template>
 

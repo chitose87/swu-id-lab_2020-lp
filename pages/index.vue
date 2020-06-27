@@ -5,7 +5,7 @@
       //LabComp
       ProjectsComp
       //JoinusComp
-      DpComp
+      //DpComp
       //AnotherComp
 
     GlobalFooter
