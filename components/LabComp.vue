@@ -67,6 +67,9 @@
                 | 主にWebサイトの設計や
                 br
                 | プログラミングを行います。
+          .submit
+            a.button(href="/member/",target="_blank")
+              | メンバー紹介ページ
 
     section.community
       .container
@@ -252,6 +255,10 @@
           @include mediaquery-sm {
             padding-left: 1rem;
             padding-right: 1rem;
+          }
+          .submit{
+            text-align: center;
+            padding-top: 5rem;
           }
         }
 

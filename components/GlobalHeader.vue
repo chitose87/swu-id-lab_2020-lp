@@ -5,7 +5,6 @@
       a.link-item(href="/#about") About
       a.link-item(href="/#project") Projects
       a.link-item(href="/#joinus") JoinUs.
-      a.link-item(href="/#dp") DP
       span.link-item |
       a.link-item(href="/member/") Members
 

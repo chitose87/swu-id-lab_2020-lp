@@ -18,7 +18,7 @@
         br
         | 簡単なことではありません。
         br
-        | 誰かにやらされている感覚、単位のための参加
+        | 誰かにやらされている感覚
         br
         | では長続きしません。
       p
@@ -28,8 +28,9 @@
         br
         | 募集します。
     .submit
-      a.button(href="/member/",target="_blank")
-        | メンバー紹介ページ
+      a.button(href="https://docs.google.com/forms/d/e/1FAIpQLSeVB47nTDmPtdwR8UghT7qzX2V8DleFCO7tdqYp-5n_4j_nqA/viewform?usp=sf_link",target="_blank")
+        | 参加申し込み
+
 
 </template>
 
